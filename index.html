@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="资产笔记" />
-  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="manifest" href="/asset-note-app/manifest.webmanifest" />
   <link rel="apple-touch-icon" href="icon-192.png" />
   <title>资产笔记</title>
   <style>
@@ -994,7 +994,7 @@ _el=document.getElementById('aiFab');if(_el)_el.onclick=openAiSheet;
 _el=document.getElementById('aiClose');if(_el)_el.onclick=function(){document.getElementById('aiSheet').classList.remove('show')};
 _el=document.getElementById('aiCopy');if(_el)_el.onclick=async function(){try{await navigator.clipboard.writeText(aiContextText());alert('本页摘要已复制')}catch(e){alert('复制失败')}};
 _el=document.getElementById('aiOpen');if(_el)_el.onclick=function(){window.open('https://chatgpt.com/','_blank')};
-refreshMonthSelector(state.currentMonth);loadEditMonth(ensureSelected());renderAll();loadMarketBrief(false);loadSourceRegistry();if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+refreshMonthSelector(state.currentMonth);loadEditMonth(ensureSelected());renderAll();loadMarketBrief(false);loadSourceRegistry();if('serviceWorker' in navigator)navigator.serviceWorker.register('/asset-note-app/sw.js',{scope:'/asset-note-app/'}).catch(()=>{});
 </script>
 </body>
 </html>
