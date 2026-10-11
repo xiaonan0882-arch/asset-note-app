@@ -654,10 +654,12 @@ function renderMonthlySpecial(){
  items.forEach(x=>{group[x.category]=(group[x.category]||0)+x.amount});
  const label=ym.slice(0,4)+'年'+Number(ym.slice(5,7))+'月';
  box.innerHTML='<div class="historyHead"><div><div class="eyebrow">'+label+' · 已明确归属本月</div><div class="historyTotal">'+(items.length?fmt2(total):'待补录')+'</div></div><div class="mini">'+items.length+'笔重点支出</div></div>'+
- (items.length?'<div class="historyGrid">'+Object.entries(group).sort((a,b)=>b[1]-a[1]).map(([name,amount])=>'<div class="historyCell"><span class="mini">'+escapeHtml(name)+'</span><b>'+fmt2(amount)+'</b><span class="mini">'+(total?(amount/total*100).toFixed(1):'0')+'%</span></div>').join('')+'</div>':'<div class="empty">本月尚未记录可准确归属月份的重点支出，并不代表本月消费为零。</div>')+
+ (items.length?'<div class="historyGrid">'+Object.entries(group).sort((a,b)=>b[1]-a[1]).map(([name,amount])=>'<div class="historyCell"><span class="mini">'+escapeHtml(name)+'</span><b>'+fmt2(amount)+'</b><span class="mini">'+(total?(amount/total*100).toFixed(1):'0')+'%</span></div>').join('')+'</div>':'<div class="empty">本机尚未找到本月重点支出明细，不代表本月没有支出。<div style="margin-top:10px"><button class="btn secondary" id="monthlySpecialImport">导入 V25.1 完整数据包补齐</button></div></div>')+
  (m.shared.length?'<div class="notice info" style="margin-top:12px"><b>跨月支出（尚未拆分，不计入本月合计）</b>'+m.shared.map(x=>'<div class="mini">'+escapeHtml(x.label)+' · '+fmt2(x.amount)+'（'+escapeHtml(x.month)+'）</div>').join('')+'</div>':'')+
  (m.unallocated?'<div class="mini" style="margin-top:10px">另有仅记录年度累计、未明确到月份的支出，不会随意分摊到本月。</div>':'')+
  '<div class="mini" style="margin-top:10px">仅汇总已明确归属本月的重点支出；普通日常消费及未拆分的跨月支出不重复计入。</div>';
+ const importButton=document.getElementById('monthlySpecialImport');
+ if(importButton)importButton.onclick=()=>document.getElementById('patchFile').click();
 }
 
 function renderBudgetLedger(){
@@ -1018,7 +1020,108 @@ document.getElementById('quickAddInvest').onclick=()=>{
   alert('导入失败：'+msg);
  }
 }
-document.getElementById('patchFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const d=JSON.parse(await f.text());if(!d||typeof d!=='object'||!d.months)throw Error('缺少历史月份');const backup='asset_note_before_import_'+Date.now();localStorage.setItem(backup,JSON.stringify(state));state.months=state.months||{};for(const [ym,old] of Object.entries(d.months)){const cur=state.months[ym];if(!cur){state.months[ym]=old;continue}for(const [key,value] of Object.entries(old)){if(cur[key]===undefined||cur[key]===null){cur[key]=value;continue}if(key==='assets'&&Array.isArray(cur.assets)&&cur.assets.length===0&&Array.isArray(value)&&value.length){cur.assets=value;cur.snapshotIncomplete=false}if((key==='income'||key==='expense')&&value&&typeof value==='object')cur[key]={...value,...cur[key]}}}for(const field of ['annualHistory','investmentMonthlyHistory','annualSpecialSpending'])if(d[field])state[field]={...d[field],...(state[field]||{})};for(const field of ['fundMonthly2026','fundSepDetail','milestones','tradeHistory','accounts'])if(d[field]&&(!Array.isArray(state[field])||state[field].length===0))state[field]=d[field];normalizeState();save();refreshMonthSelector();renderAll();alert('历史数据已安全补齐，原有记录优先保留。')}catch(err){alert('导入失败：'+err.message)}};document.getElementById('resetAll').onclick=()=>{if(confirm('确定清空全部本地数据？此操作不可恢复。')){localStorage.removeItem(LS_KEY);state=load();refreshMonthSelector();renderAll()}};
+function normalizeExpenseLabel(value){
+ return String(value||'').toLowerCase().replace(/（[^）]*(?:跨|9.?10月)[^）]*）/g,'').replace(/\([^)]*(?:跨|9.?10月)[^)]*\)/g,'').replace(/[\s·・、，,（）()\-—_]/g,'');
+}
+function sameExpense(a,b){
+ return Math.abs(Number(a.amount||0)-Number(b.amount||0))<0.005&&normalizeExpenseLabel(a.label||a.note)===normalizeExpenseLabel(b.label||b.note);
+}
+function mergeAnnualSpecialData(current,incoming){
+ const output={...(current||{})};
+ for(const [year,record] of Object.entries(incoming||{})){
+  const old=output[year]||{},categories={...(record.categories||{}),...(old.categories||{})};
+  // 新版本中明确修正的旅游累计，不再被旧版本的较小金额覆盖。
+  if(record.categories?.['旅游']!=null&&old.categories?.['旅游']!=null)
+   categories['旅游']=Math.max(Number(record.categories['旅游']),Number(old.categories['旅游']));
+  const items=(Array.isArray(old.items)?old.items:[]).map(x=>({...x}));
+  for(const item of (Array.isArray(record.items)?record.items:[])){
+   const idx=items.findIndex(x=>sameExpense(x,item));
+   if(idx<0){items.push({...item});continue}
+   const prior=items[idx];
+   // 明确给出的会计归属月份优先；其它已有人工录入字段保持不变。
+   items[idx]={...item,...prior,...(item.accountingMonth?{month:item.accountingMonth,accountingMonth:item.accountingMonth}:{})};
+  }
+  output[year]={...record,...old,categories,items};
+ }
+ return output;
+}
+function mergeExpenseLedger(current,incoming){
+ const result=(Array.isArray(current)?current:[]).map(x=>({...x}));
+ for(const item of (Array.isArray(incoming)?incoming:[])){
+  if(!result.some(x=>sameExpense(x,item)&&String(x.category||'')===String(item.category||'')))
+   result.push({...item});
+ }
+ return result;
+}
+function mergeTravelPlans(current,incoming){
+ const result=(Array.isArray(current)?current:[]).map(x=>({...x}));
+ for(const trip of (Array.isArray(incoming)?incoming:[])){
+  const idx=result.findIndex(x=>normalizeExpenseLabel(x.name)===normalizeExpenseLabel(trip.name));
+  if(idx<0){result.push({...trip});continue}
+  const old=result[idx];
+  result[idx]={...trip,...old,...(trip.accountingMonth?{accountingMonth:trip.accountingMonth}:{})};
+ }
+ return result;
+}
+function mergeAssetDataPackage(current,incoming){
+ if(!incoming||typeof incoming!=='object'||!incoming.months||typeof incoming.months!=='object'||Array.isArray(incoming.months))
+  throw Error('文件不是有效的资产笔记数据包');
+ const out=JSON.parse(JSON.stringify(current||starterState()));
+ out.months=out.months||{};
+ for(const [ym,old] of Object.entries(incoming.months)){
+  if(!out.months[ym]){out.months[ym]=old;continue}
+  const now=out.months[ym];
+  for(const [key,value] of Object.entries(old)){
+   if(now[key]===undefined||now[key]===null){now[key]=value;continue}
+   if(key==='assets'&&Array.isArray(now.assets)&&!now.assets.length&&Array.isArray(value)&&value.length){
+    now.assets=value;now.snapshotIncomplete=false;
+   }else if((key==='income'||key==='expense')&&value&&typeof value==='object'){
+    now[key]={...value,...now[key]};
+   }
+  }
+ }
+ out.annualSpecialSpending=mergeAnnualSpecialData(out.annualSpecialSpending,incoming.annualSpecialSpending);
+ out.discretionaryLedger=mergeExpenseLedger(out.discretionaryLedger,incoming.discretionaryLedger);
+ out.travelPlans=mergeTravelPlans(out.travelPlans,incoming.travelPlans);
+ for(const field of ['annualHistory','investmentMonthlyHistory','salaryDeposits']){
+  if(incoming[field]&&typeof incoming[field]==='object')out[field]={...incoming[field],...(out[field]||{})};
+ }
+ for(const [key,value] of Object.entries(incoming)){
+  if(['months','annualSpecialSpending','discretionaryLedger','travelPlans','annualHistory','investmentMonthlyHistory','salaryDeposits','currentMonth'].includes(key))continue;
+  const existing=out[key];
+  if(existing===undefined||existing===null||(Array.isArray(existing)&&!existing.length)||
+     (existing&&typeof existing==='object'&&!Array.isArray(existing)&&!Object.keys(existing).length))
+   out[key]=value;
+ }
+ out.lastImportedPackageVersion=String(incoming.dataVersion||'未知版本');
+ return out;
+}
+async function importAssetDataPackage(file){
+ const status=document.getElementById('importStatus');
+ try{
+  const incoming=JSON.parse(await file.text());
+  const merged=mergeAssetDataPackage(state,incoming);
+  const oldData=localStorage.getItem(LS_KEY);
+  if(oldData)localStorage.setItem('asset_note_before_import_'+Date.now(),oldData);
+  localStorage.setItem(LS_KEY,JSON.stringify(merged));
+  const selected=ensureSelected();
+  state=merged;syncCats();normalizeState();refreshMonthSelector(selected);renderAll();
+  const oct=specialMonthItems('2026-10').items.filter(x=>x.category==='旅游').reduce((a,x)=>a+Number(x.amount||0),0);
+  const message='已合并 '+Object.keys(incoming.months).length+' 个月份的数据；10月已归属旅游重点支出：'+(oct>0?fmt2(oct):'尚未找到，请确认导入的是V25.1')+'。本机旧记录已保留。';
+  if(status)status.textContent=message;
+  alert(message);
+ }catch(err){
+  const msg=err?.message||String(err);
+  if(status)status.textContent='导入失败：'+msg+'；原有数据未被覆盖。';
+  alert('导入失败：'+msg);
+ }
+}
+document.getElementById('patchFile').onchange=async e=>{
+ const file=e.target.files&&e.target.files[0];if(!file)return;
+ await importAssetDataPackage(file);
+ e.target.value='';
+};
+document.getElementById('resetAll').onclick=()=>{if(confirm('确定清空全部本地数据？此操作不可恢复。')){localStorage.removeItem(LS_KEY);state=load();refreshMonthSelector();renderAll()}};
 const PIN_HASH_KEY='asset_note_pin_hash_v1';
 async function pinHash(pin){const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('asset-note:'+pin));return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('')}
 function showLock(mode='unlock'){const o=document.getElementById('lockOverlay'),t=document.getElementById('lockTitle'),d=document.getElementById('lockDesc'),a=document.getElementById('pinAction'),i=document.getElementById('pinInput'),m=document.getElementById('lockMsg');o.classList.add('show');i.value='';m.textContent='';if(mode==='setup'){t.textContent='设置隐私密码';d.textContent='设置 6 位数字密码';a.textContent='保存密码';a.dataset.mode='setup'}else{t.textContent='资产笔记已锁定';d.textContent='输入 6 位数字密码';a.textContent='解锁';a.dataset.mode='unlock'}setTimeout(()=>i.focus(),100)}
