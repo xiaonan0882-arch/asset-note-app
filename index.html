@@ -279,9 +279,7 @@ function hasUsableSavedData(){
   });
  }catch(e){return false}
 }
-if(IS_STANDALONE&&!hasUsableSavedData()&&!location.pathname.endsWith('/restore.html')){
-  location.replace('./restore.html?from=installed');
-}
+// Never force-redirect a newly installed home-screen app. Let users open the app and import a local backup.
 const baseIncomeCats=['税后工资','公积金','奖金','其他收入'];
 const baseExpenseCats=['住房','给家里','日常生活','旅游','运动活动','运动装备','猫/宠物','兴趣/文娱','大额购物/奢侈品','医疗','其他消费'];
 let incomeCats=[...baseIncomeCats], expenseCats=[...baseExpenseCats];
