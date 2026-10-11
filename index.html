@@ -645,6 +645,17 @@ function specialMonthItems(ym){
    shared.push({category:categoryFor(x),label:String(x.label||'跨月支出'),amount,month:when});
   }
  }
+ // 如果旧版数据已保存完整的旅行计划，但未写入年度重点支出，也能恢复到实际使用月份。
+ for(const trip of (state.travelPlans||[])){
+  if(trip.status!=='已完成')continue;
+  const amount=Number(trip.actualAmount??trip.estimateMin??0),max=Number(trip.estimateMax??amount);
+  if(!(amount>0)||Math.abs(max-amount)>0.005)continue;
+  const tripMonths=String(trip.month||'').match(/20\d{2}-(?:0[1-9]|1[0-2])/g)||[];
+  const tripMonth=String(trip.accountingMonth||'')||tripMonths[tripMonths.length-1]||'';
+  if(tripMonth!==ym)continue;
+  const record={category:'旅游',label:String(trip.name||'已完成旅行'),amount,date:ym,source:'travelPlan'};
+  if(!items.some(x=>sameExpense(x,record)))items.push(record);
+ }
  return {items,shared,unallocated:extras.some(x=>String(x.month||'').includes('YTD'))};
 }
 function renderMonthlySpecial(){
@@ -1048,7 +1059,7 @@ function mergeAnnualSpecialData(current,incoming){
 function mergeExpenseLedger(current,incoming){
  const result=(Array.isArray(current)?current:[]).map(x=>({...x}));
  for(const item of (Array.isArray(incoming)?incoming:[])){
-  if(!result.some(x=>sameExpense(x,item)&&String(x.category||'')===String(item.category||'')))
+  if(!result.some(x=>sameExpense(x,item)&&String(x.category||'')===String(item.category||'')&&String(x.month||String(x.date||'').slice(0,7))===String(item.month||String(item.date||'').slice(0,7))))
    result.push({...item});
  }
  return result;
