@@ -156,7 +156,7 @@
   </section>
 
   <section id="spending" class="page">
-    <div class="section" style="margin-top:0"><h3>年度重点支出</h3><div id="annualSpecialSummary" class="card"></div></div>
+    <div class="section" style="margin-top:0"><h3>本月重点支出</h3><div id="monthlySpecialSummary" class="card"></div></div>
 
     <div class="section"><h3>快速记录</h3><div class="card">
       <div id="budgetLedgerSummary"></div>
@@ -165,7 +165,7 @@
         <div><label class="mini">分类</label><select id="ledgerCategory"></select></div>
         <div><label class="mini">金额</label><input id="ledgerAmount" type="number" placeholder="0"></div>
         <div><label class="mini">名称</label><input id="ledgerNote" type="text" placeholder="如：攀岩 / 新疆机票 / 包包"></div>
-        <button id="ledgerAdd" class="btn full">保存到年度重点支出</button>
+        <button id="ledgerAdd" class="btn full">保存重点支出（按日期归属月份）</button>
       </div></div><div id="ledgerRecent"></div>
     </div></div>
 
@@ -183,12 +183,13 @@
       </div><div id="buyDecisionResult"></div>
     </div></div>
 
-    <div class="section"><h3>三年分类对比</h3><div id="yearCategoryCompare" class="card"></div></div>
-    <div class="section"><h3>消费策略</h3><div id="spendingStrategyCard" class="card"></div></div>
-    <div class="section"><h3>家庭责任</h3><div id="familyPlanCard" class="card"></div></div>
-    <div class="section"><h3>旅行计划</h3><div id="travelPlanCard" class="card"></div></div>
+    <div class="section"><h3>年度累计重点支出 · 不随月份切换</h3><div id="annualSpecialSummary" class="card"></div></div>
+    <div class="section"><h3>三年分类对比 · 年度参考</h3><div id="yearCategoryCompare" class="card"></div></div>
+    <div class="section"><h3>消费策略 · 长期参考</h3><div id="spendingStrategyCard" class="card"></div></div>
+    <div class="section"><h3>家庭责任 · 年度参考</h3><div id="familyPlanCard" class="card"></div></div>
+    <div class="section"><h3>旅行计划 · 全年安排</h3><div id="travelPlanCard" class="card"></div></div>
     <div class="section"><h3>固定订阅</h3><div id="subscriptionCard" class="card"></div></div>
-    <div class="section"><h3>现金流反推</h3><div id="cashflowAnalysisCard" class="card"></div></div>
+    <div class="section"><h3>现金流反推 · 年度估算</h3><div id="cashflowAnalysisCard" class="card"></div></div>
   </section>
 
   <section id="research" class="page">
@@ -600,9 +601,9 @@ function renderTravelPlans(){
  const actual=Number(((state.annualSpecialSpending||{})['2026']||{}).categories?.['旅游']||0);
  const confirmed=arr.filter(x=>x.status==='预计发生').reduce((a,x)=>a+Number(x.estimateMin||0),0);
  const confirmedMax=arr.filter(x=>x.status==='预计发生').reduce((a,x)=>a+Number(x.estimateMax||x.estimateMin||0),0);
- box.innerHTML=(state.salaryUpdate?'<div class="notice info"><b>收入基线更新</b><div class="mini">10月9日工资实际到账¥15,525.23；9月¥12,645.23，增加¥2,880（+22.8%）；6—9月平均¥12,923.49。待报销¥8,132尚未到账。</div></div>':'')+'<div class="historyHead"><div><div class="eyebrow">2026已发生</div><div class="historyTotal">'+fmt(actual)+'</div></div><div style="text-align:right"><div class="eyebrow">含新疆后的基础预测</div><b>'+fmt(actual+confirmed)+'–'+fmt(actual+confirmedMax)+'</b></div></div>'+
+ box.innerHTML='<div class="historyHead"><div><div class="eyebrow">2026已发生</div><div class="historyTotal">'+fmt(actual)+'</div></div><div style="text-align:right"><div class="eyebrow">含新疆后的基础预测</div><b>'+fmt(actual+confirmed)+'–'+fmt(actual+confirmedMax)+'</b></div></div>'+
  arr.map(x=>'<div class="summaryRow"><span><b style="font-size:13px">'+escapeHtml(x.name)+'</b><div class="mini">'+escapeHtml(x.month||'')+' · '+escapeHtml(x.status||'')+' · '+escapeHtml(x.note||'')+'</div></span><b>'+(x.estimateMin!=null?fmt(x.estimateMin)+(x.estimateMax&&x.estimateMax!==x.estimateMin?'–'+fmt(x.estimateMax):''):'待定')+'</b></div>').join('')+
- '<div class="notice warn"><b>旅行执行规则</b><div class="mini">新疆之后，10月和11月的可选出行不要同时默认发生：优先等行程确认后再从旅游专项或运动预算中占用。12月跨年/元旦按2027旅游预算记。</div></div>';
+ '<div class="notice warn"><b>旅行执行规则</b><div class="mini">未确认的行程不提前计入已发生支出；跨年旅行按实际归属年份记录。</div></div>';
 }
 function renderSubscriptions(){
  const box=document.getElementById('subscriptionCard');if(!box)return;
@@ -612,6 +613,50 @@ function renderSubscriptions(){
  box.innerHTML='<div class="historyHead"><div><div class="eyebrow">每月固定订阅</div><div class="historyTotal">'+fmt(monthly)+'</div></div><div style="text-align:right"><div class="eyebrow">年化</div><b>'+fmt(monthly*12)+'</b></div></div>'+arr.map(x=>'<div class="summaryRow"><span><b style="font-size:13px">'+escapeHtml(x.name)+'</b><div class="mini">'+escapeHtml(x.note||'')+'</div></span><b>'+fmt(x.monthly)+'/月</b></div>').join('');
 }
 function budgetMonthKey(){return ensureSelected().slice(0,7)}
+function specialMonthItems(ym){
+ const ledger=(state.discretionaryLedger||[]).filter(x=>(x.month||String(x.date||'').slice(0,7))===ym&&Number(x.amount)>0)
+  .map(x=>({category:String(x.category||'其他重点支出'),label:String(x.note||x.category||'重点支出'),amount:Number(x.amount),date:String(x.date||ym),source:'ledger'}));
+ const annual=(state.annualSpecialSpending||{})[ym.slice(0,4)]||{};
+ const extras=Array.isArray(annual.items)?annual.items:[];
+ const categoryFor=x=>{
+  if(x.category)return String(x.category);
+  const name=String(x.label||'');
+  if(/给家里|家庭支持/.test(name))return '给家里';
+  if(/房租|水电|住房/.test(name))return '住房';
+  if(/旅游|旅行|新疆|南京|韩国|江门|泉州|湖州|生日深圳/.test(name))return '旅游';
+  if(/包包|中古包|奢侈/.test(name))return '包包/奢侈品';
+  if(/运动|健身|攀岩|羽毛球|游泳|匹克球/.test(name))return '运动/健身';
+  if(/猫|宠物/.test(name))return '猫/宠物';
+  if(/艺术|文娱|演出|展览/.test(name))return '艺术/文娱';
+  return '其他重点支出';
+ };
+ const normalized=x=>String(x||'').replace(/\s+/g,'').toLowerCase();
+ const items=ledger.slice(),shared=[];
+ for(const x of extras){
+  const amount=Number(x.amount||0),when=String(x.month||'');
+  if(!(amount>0))continue;
+  if(when===ym){
+   if(items.some(r=>Math.abs(r.amount-amount)<0.005&&normalized(r.label)===normalized(x.label)))continue;
+   items.push({category:categoryFor(x),label:String(x.label||'重点支出'),amount,date:ym,source:'annual'});
+  }else if(when.split(/[\s/,，、;；]+/).includes(ym)){
+   shared.push({category:categoryFor(x),label:String(x.label||'跨月支出'),amount,month:when});
+  }
+ }
+ return {items,shared,unallocated:extras.some(x=>String(x.month||'').includes('YTD'))};
+}
+function renderMonthlySpecial(){
+ const box=document.getElementById('monthlySpecialSummary');if(!box)return;
+ const ym=budgetMonthKey(),m=specialMonthItems(ym),items=m.items;
+ const total=items.reduce((a,x)=>a+x.amount,0),group={};
+ items.forEach(x=>{group[x.category]=(group[x.category]||0)+x.amount});
+ const label=ym.slice(0,4)+'年'+Number(ym.slice(5,7))+'月';
+ box.innerHTML='<div class="historyHead"><div><div class="eyebrow">'+label+' · 已明确归属本月</div><div class="historyTotal">'+(items.length?fmt2(total):'待补录')+'</div></div><div class="mini">'+items.length+'笔重点支出</div></div>'+
+ (items.length?'<div class="historyGrid">'+Object.entries(group).sort((a,b)=>b[1]-a[1]).map(([name,amount])=>'<div class="historyCell"><span class="mini">'+escapeHtml(name)+'</span><b>'+fmt2(amount)+'</b><span class="mini">'+(total?(amount/total*100).toFixed(1):'0')+'%</span></div>').join('')+'</div>':'<div class="empty">本月尚未记录可准确归属月份的重点支出，并不代表本月消费为零。</div>')+
+ (m.shared.length?'<div class="notice info" style="margin-top:12px"><b>跨月支出（尚未拆分，不计入本月合计）</b>'+m.shared.map(x=>'<div class="mini">'+escapeHtml(x.label)+' · '+fmt2(x.amount)+'（'+escapeHtml(x.month)+'）</div>').join('')+'</div>':'')+
+ (m.unallocated?'<div class="mini" style="margin-top:10px">另有仅记录年度累计、未明确到月份的支出，不会随意分摊到本月。</div>':'')+
+ '<div class="mini" style="margin-top:10px">仅汇总已明确归属本月的重点支出；普通日常消费及未拆分的跨月支出不重复计入。</div>';
+}
+
 function renderBudgetLedger(){
  const sum=document.getElementById('budgetLedgerSummary'),recent=document.getElementById('ledgerRecent');
  if(!sum||!recent)return;
@@ -624,12 +669,15 @@ function renderBudgetLedger(){
  }).join('')+'</div>':'<div class="empty">导入预算配置后，这里会显示本月已花和剩余额度</div>';
  const opts=cfg.map(x=>`<option value="${x.name}">${x.name}</option>`).join('');
  const lc=document.getElementById('ledgerCategory'),bc=document.getElementById('buyCategory');if(lc)lc.innerHTML=opts;if(bc)bc.innerHTML=opts;
- recent.innerHTML=rows.length?rows.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,8).map(r=>`<div class="summaryRow"><span><b style="font-size:13px">${r.category} · ${r.note||'支出'}</b><div class="mini">${r.date}</div></span><b>${fmt(r.amount)}</b></div>`).join(''):'<div class="empty">还没有专项记录</div>';
- const d=document.getElementById('ledgerDate');if(d&&!d.value)d.value=new Date().toISOString().slice(0,10);
+ const current=specialMonthItems(ym).items.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+ recent.innerHTML='<div class="mini" style="margin:12px 0 5px">'+ym.slice(0,4)+'年'+Number(ym.slice(5,7))+'月 · 重点支出明细</div>'+
+ (current.length?current.map(r=>`<div class="summaryRow"><span><b style="font-size:13px">${escapeHtml(r.category)} · ${escapeHtml(r.label)}</b><div class="mini">${escapeHtml(r.date)}</div></span><b>${fmt2(r.amount)}</b></div>`).join(''):'<div class="empty">本月暂无已明确归属的重点支出</div>');
+ const d=document.getElementById('ledgerDate');if(d&&d.value.slice(0,7)!==ym){const now=new Date();d.value=ym===ymNow()?ym+'-'+String(now.getDate()).padStart(2,'0'):ym+'-01';}
 }
 function addLedgerEntry(){
  const date=document.getElementById('ledgerDate').value,category=document.getElementById('ledgerCategory').value,amount=Number(document.getElementById('ledgerAmount').value||0),note=document.getElementById('ledgerNote').value.trim();
  if(!date||!category||amount<=0)return alert('请填写日期、分类和金额');
+ if(date.slice(0,7)!==budgetMonthKey()&&!confirm('记录日期属于'+date.slice(0,7)+'，与当前选择的'+budgetMonthKey()+'不同。仍按填写日期保存吗？'))return;
  state.discretionaryLedger=state.discretionaryLedger||[];
  state.discretionaryLedger.push({date,month:date.slice(0,7),category,amount,note});
  const year=date.slice(0,4),map={'运动活动':'运动/健身','运动装备':'运动/健身','旅游':'旅游','包包/奢侈品':'包包/奢侈品','艺术/文娱':'艺术/文娱','猫/宠物':'猫/宠物','其他大额':'其他大额'};
@@ -675,7 +723,7 @@ async function askPurchaseAI(){
  const prompt=`我在资产笔记里准备决定一笔大额支出。请结合我的资金计划，不要只回答“买/不买”，而是分析必要性、使用频率、每次使用成本、替代方案、延迟购买的代价，以及这笔钱会挤占哪个资金桶。\n商品：${item}\n价格：${price}元\n分类：${cat}\n预计使用频率：${freq}\n购买原因/现有问题：${reason||'未填写'}\n\n${aiContextText()}`;
  try{await navigator.clipboard.writeText(prompt);alert('购买决策问题已复制。接下来打开 ChatGPT 粘贴即可。');window.open('https://chatgpt.com/','_blank')}catch(e){alert('复制失败，请手动复制')}
 }
-function renderSpending(){renderAnnualSpecial();renderSpendingStrategy();renderFamilyPlan();renderTravelPlans();renderSubscriptions();renderCashflowAnalysis();renderBudgetLedger()}
+function renderSpending(){renderMonthlySpecial();renderAnnualSpecial();renderSpendingStrategy();renderFamilyPlan();renderTravelPlans();renderSubscriptions();renderCashflowAnalysis();renderBudgetLedger()}
 function renderAnnualHistory(){
  const h=state.annualHistory||{},years=Object.keys(h).sort(),cards=document.getElementById('annualHistoryCards');
  cards.innerHTML=years.map(y=>{
