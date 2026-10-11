@@ -633,7 +633,9 @@ function specialMonthItems(ym){
  const normalized=x=>String(x||'').replace(/\s+/g,'').toLowerCase();
  const items=ledger.slice(),shared=[];
  for(const x of extras){
-  const amount=Number(x.amount||0),when=String(x.month||'');
+  const amount=Number(x.amount||0),originalMonth=String(x.month||'');
+  // 新疆·南京旅行按实际使用归属2026年10月，即使旧V25数据包标为9—10月也自动正确显示。
+  const when=/新疆[·・\s]*南京旅行/.test(String(x.label||''))&&Math.abs(amount-16816.02)<0.01?'2026-10':originalMonth;
   if(!(amount>0))continue;
   if(when===ym){
    if(items.some(r=>Math.abs(r.amount-amount)<0.005&&normalized(r.label)===normalized(x.label)))continue;
@@ -663,8 +665,10 @@ function renderBudgetLedger(){
  const cfg=state.budgetConfig||[], rows=state.discretionaryLedger||[], ym=budgetMonthKey();
  const spendCfg=cfg.filter(x=>x.mode!=='save');
  sum.innerHTML=spendCfg.length?'<div class="ledgerGrid">'+spendCfg.map(c=>{
-   const used=rows.filter(r=>r.month===ym&&r.category===c.name).reduce((a,r)=>a+Number(r.amount||0),0);
-   const budget=Number(c.monthlyBudget||0), monthNo=Number(ym.slice(5,7)), ytdUsed=rows.filter(r=>r.month?.startsWith(ym.slice(0,4))&&r.month<=ym&&r.category===c.name).reduce((a,r)=>a+Number(r.amount||0),0), allowance=c.rollover?budget*monthNo:budget, relevantUsed=c.rollover?ytdUsed:used, remain=budget?allowance-relevantUsed:null,pct=budget?Math.min(100,relevantUsed/allowance*100):0;
+   const ledgerUsed=rows.filter(r=>r.month===ym&&r.category===c.name).reduce((a,r)=>a+Number(r.amount||0),0);
+   const extraTravel=c.name==='旅游'?specialMonthItems(ym).items.filter(x=>x.category==='旅游'&&x.source==='annual').reduce((a,x)=>a+x.amount,0):0;
+   const used=ledgerUsed+extraTravel;
+   const budget=Number(c.monthlyBudget||0), monthNo=Number(ym.slice(5,7)), ytdUsed=rows.filter(r=>r.month?.startsWith(ym.slice(0,4))&&r.month<=ym&&r.category===c.name).reduce((a,r)=>a+Number(r.amount||0),0)+(c.name==='旅游'?Object.keys(state.months||{}).filter(m=>m.startsWith(ym.slice(0,4))&&m<=ym).reduce((a,m)=>a+specialMonthItems(m).items.filter(x=>x.category==='旅游'&&x.source==='annual').reduce((b,x)=>b+x.amount,0),0):0), allowance=c.rollover?budget*monthNo:budget, relevantUsed=c.rollover?ytdUsed:used, remain=budget?allowance-relevantUsed:null,pct=budget?Math.min(100,relevantUsed/allowance*100):0;
    return `<div class="ledgerBudget"><div class="eyebrow">${c.name}</div><b>${fmt(used)}${budget?' / '+fmt(budget):''}</b><div class="mini">${budget?(remain>=0?(c.rollover?'累计还可用 ':'还可用 ')+fmt(remain):'超出 '+fmt(-remain)):'仅记录 · 暂无上限'}</div>${budget?`<div class="tinyProgress"><i style="width:${pct}%"></i></div>`:''}</div>`
  }).join('')+'</div>':'<div class="empty">导入预算配置后，这里会显示本月已花和剩余额度</div>';
  const opts=cfg.map(x=>`<option value="${x.name}">${x.name}</option>`).join('');
