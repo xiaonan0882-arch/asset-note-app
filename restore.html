@@ -3,6 +3,8 @@
 <style>*{box-sizing:border-box}body{font:15px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;background:#f6f7f9;color:#17212b;margin:0;padding:env(safe-area-inset-top) 0 30px}main{max-width:580px;margin:36px auto;padding:16px}.card{background:#fff;border:1px solid #edf0f4;border-radius:20px;padding:24px;box-shadow:0 4px 16px #00000008}h1{font-size:25px;margin:0 0 8px}p{line-height:1.7;color:#647083}label,.btn{display:block;width:100%;padding:14px 12px;border:0;border-radius:12px;text-align:center;background:#246bfd;color:#fff;font-size:16px;font-weight:650;cursor:pointer;margin:12px 0;text-decoration:none}.secondary{background:#f0f3f8;color:#263d5a}small{color:#77808b}#status{white-space:pre-wrap;margin-top:12px;line-height:1.6}input[type=file]{display:none}</style></head><body><main><div class="card"><h1>恢复资产笔记</h1><p>新安装的 App 尚未找到本机财务数据。你的 V25 数据包可以直接导入；导入只发生在手机本地，不会上传到 GitHub。</p><label for="file">选择 V25 / 历史 JSON 数据包</label><input id="file" type="file" accept=".json,application/json"><a class="btn secondary" href="./index.html">先进入资产笔记</a><div id="status" role="status"></div><small>导入前会备份当前设备已有的数据。不要清除 Safari 网站数据。</small></div></main>
 <script>
 const KEY='asset_note_v5',status=document.getElementById('status');
+function normalizedName(x){return String(x||'').toLowerCase().replace(/（[^）]*跨[^）]*）/g,'').replace(/[\s·・、，,（）()\-—_]/g,'')}
+function sameItem(a,b){return Math.abs(Number(a.amount||0)-Number(b.amount||0))<0.005&&normalizedName(a.label||a.note)===normalizedName(b.label||b.note)}
 function merge(current,incoming){
  if(!current||!current.months)return incoming;
  const out={...incoming,...current,months:{...incoming.months}};
@@ -13,12 +15,39 @@ function merge(current,incoming){
   if((!Array.isArray(now.assets)||!now.assets.length)&&Array.isArray(old.assets)&&old.assets.length)month.assets=old.assets;
   out.months[ym]=month;
  }
- for(const key of ['annualHistory','annualSpecialSpending','investmentMonthlyHistory','salaryDeposits'])out[key]={...(incoming[key]||{}),...(current[key]||{})};
+ for(const key of ['annualHistory','investmentMonthlyHistory','salaryDeposits'])out[key]={...(incoming[key]||{}),...(current[key]||{})};
+ out.annualSpecialSpending={...(incoming.annualSpecialSpending||{}),...(current.annualSpecialSpending||{})};
+ for(const [year,record] of Object.entries(incoming.annualSpecialSpending||{})){
+  const prior=(current.annualSpecialSpending||{})[year]||{};
+  const items=(prior.items||[]).map(x=>({...x}));
+  for(const x of (record.items||[])){
+   const idx=items.findIndex(y=>sameItem(x,y));
+   if(idx<0)items.push({...x});
+   else items[idx]={...x,...items[idx],...(x.accountingMonth?{month:x.accountingMonth,accountingMonth:x.accountingMonth}:{})};
+  }
+  const categories={...(record.categories||{}),...(prior.categories||{})};
+  if(record.categories?.['旅游']!=null&&prior.categories?.['旅游']!=null)
+   categories['旅游']=Math.max(Number(record.categories['旅游']),Number(prior.categories['旅游']));
+  out.annualSpecialSpending[year]={...record,...prior,categories,items};
+ }
+ const ledger=(current.discretionaryLedger||[]).map(x=>({...x}));
+ for(const item of (incoming.discretionaryLedger||[])){
+  if(!ledger.some(x=>sameItem(x,item)&&String(x.category||'')===String(item.category||'')&&String(x.month||'')===String(item.month||'')))ledger.push({...item});
+ }
+ out.discretionaryLedger=ledger;
+ const plans=(current.travelPlans||[]).map(x=>({...x}));
+ for(const trip of (incoming.travelPlans||[])){
+  const idx=plans.findIndex(x=>normalizedName(x.name)===normalizedName(trip.name));
+  if(idx<0)plans.push({...trip});
+  else plans[idx]={...trip,...plans[idx],...(trip.accountingMonth?{accountingMonth:trip.accountingMonth}:{})};
+ }
+ out.travelPlans=plans;
  for(const [key,value] of Object.entries(incoming)){
-  if(key==='months')continue;
+  if(['months','annualSpecialSpending','discretionaryLedger','travelPlans','currentMonth'].includes(key))continue;
   const existing=out[key];
   if(existing===undefined||existing===null||(Array.isArray(existing)&&existing.length===0)||(existing&&typeof existing==='object'&&!Array.isArray(existing)&&Object.keys(existing).length===0))out[key]=value;
  }
+ out.lastImportedPackageVersion=String(incoming.dataVersion||'未知版本');
  return out;
 }
 document.getElementById('file').onchange=async e=>{
