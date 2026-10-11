@@ -634,8 +634,9 @@ function specialMonthItems(ym){
  const items=ledger.slice(),shared=[];
  for(const x of extras){
   const amount=Number(x.amount||0),originalMonth=String(x.month||'');
-  // 新疆·南京旅行按实际使用归属2026年10月，即使旧V25数据包标为9—10月也自动正确显示。
-  const when=/新疆[·・\s]*南京旅行/.test(String(x.label||''))&&Math.abs(amount-16816.02)<0.01?'2026-10':originalMonth;
+  // 跨月旅游按实际使用的结束月份归类；数据包若提供accountingMonth则优先使用。
+  const monthParts=originalMonth.match(/20\d{2}-(?:0[1-9]|1[0-2])/g)||[];
+  const when=String(x.accountingMonth||'')||(categoryFor(x)==='旅游'&&monthParts.length>1?monthParts[monthParts.length-1]:originalMonth);
   if(!(amount>0))continue;
   if(when===ym){
    if(items.some(r=>Math.abs(r.amount-amount)<0.005&&normalized(r.label)===normalized(x.label)))continue;
