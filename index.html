@@ -561,7 +561,11 @@ function renderAnnualSpecial(){
  const box=document.getElementById('annualSpecialSummary'),cmp=document.getElementById('yearCategoryCompare');
  if(!box||!cmp)return;
  const h=state.annualHistory||{},a24=h['2024']||{},a25=h['2025']||{},c24=a24.categories||{},c25=a25.categories||{};
- const y26=(state.annualSpecialSpending||{})['2026']||{},c26=y26.categories||{};
+ const y26=(state.annualSpecialSpending||{})['2026']||{},c26={...(y26.categories||{})};
+ // 年度旅游累计至少包含已明确归属月份的完成旅行，避免旧数据包的年度值滞后。
+ const travelRecorded=Array.from({length:12},(_,i)=>'2026-'+String(i+1).padStart(2,'0'))
+  .reduce((total,ym)=>total+specialMonthItems(ym).items.filter(x=>x.category==='旅游').reduce((sum,x)=>sum+Number(x.amount||0),0),0);
+ if(travelRecorded>Number(c26['旅游']||0))c26['旅游']=Math.round(travelRecorded*100)/100;
  const t24=Number(a24.adjustedConsumption||0),t25=Number(a25.adjustedConsumption||0),t26=Object.values(c26).reduce((a,b)=>a+Number(b||0),0);
  box.innerHTML=Object.keys(c26).length?'<div class="historyHead"><div><div class="eyebrow">2026截至目前 · 已分类重点支出</div><div class="historyTotal">'+fmt(t26)+'</div></div><div class="mini">普通日常尚未补齐</div></div><div class="historyGrid">'+Object.entries(c26).sort((a,b)=>b[1]-a[1]).map(([k,v])=>'<div class="historyCell"><span class="mini">'+escapeHtml(k)+'</span><b>'+fmt(v)+'</b><span class="mini">'+(t26?(Number(v)/t26*100).toFixed(1):'0')+'%</span></div>').join('')+'</div>':'<div class="empty">导入完整数据后显示</div>';
  const pct=(v,t)=>v==null||!t?'—':(Number(v)/t*100).toFixed(1)+'%';
