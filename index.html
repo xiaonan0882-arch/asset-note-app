@@ -1175,10 +1175,10 @@ function v30Panel(){
  const activity=m.investmentActivity||{},housingFund=Number(m.income?.['公积金']||0);
  const rows=[['住房',rec.housing],['日常生活（资产差额估算）',rec.estimatedDailySpending],['架子鼓课程',rec.drumming],['给爸爸',rec.father]];
  const holdings=(activity.holdings||[]).map(h=>'<tr><td style="padding:8px 0;border-bottom:1px solid #eee">'+escapeHtml(h.name)+'</td><td style="text-align:right;white-space:nowrap;border-bottom:1px solid #eee">'+v30Money(h.periodPnLProxy)+'</td></tr>').join('');
- const notes='南京旅游3033元列为11月消费，10月期末加回预付款；代哥哥保管2100元列为应付款；未报销3919元列为应收款。公积金按可提取权益列示，未确认提取到账前不重复计入银行现金。';
+ const notes='南京旅游3033元列为11月消费，10月期末加回预付款；代哥哥保管2100元列为应付款；未报销3919元列为应收款。公积金提取到账已包含银行余额，绝不重复计入资产；月度归属和实际到账日期分别记录。';
  node.innerHTML='<div style="font-size:12px;color:#667085">10月11日—11月10日 · 收支与投资对账</div><h2 style="font-size:21px;margin:8px 0 16px">钱花在哪里，真正留下多少</h2>'+
  '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">'+
- [['本期综合收入',Number(rec.wageIncome||0)+housingFund],['实际消费估算',rec.consumptionExcludingInvestmentPnL],['消费后结余（含公积金）',Number(rec.wageIncome||0)+housingFund-Number(rec.consumptionExcludingInvestmentPnL||0)],['投资损益估算',rec.estimatedInvestmentPnL]].map(([label,v])=>'<div style="background:#f5f7fa;border-radius:14px;padding:13px"><div style="font-size:12px;color:#667085">'+label+'</div><div style="font-size:21px;font-weight:700;margin-top:6px">'+v30Money(v)+'</div></div>').join('')+'</div>'+
+ [['期间实际到账收入',Number(rec.periodCashIncome||((rec.wageIncome||0)+housingFund))],['实际消费估算',rec.consumptionExcludingInvestmentPnL],['期间消费后结余',Number(rec.periodCashIncome||((rec.wageIncome||0)+housingFund))-Number(rec.consumptionExcludingInvestmentPnL||0)],['投资损益估算',rec.estimatedInvestmentPnL]].map(([label,v])=>'<div style="background:#f5f7fa;border-radius:14px;padding:13px"><div style="font-size:12px;color:#667085">'+label+'</div><div style="font-size:21px;font-weight:700;margin-top:6px">'+v30Money(v)+'</div></div>').join('')+'</div>'+
  '<h3 style="font-size:16px;margin:20px 0 8px">消费构成</h3>'+
  rows.map(([name,value])=>'<div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #eee"><span>'+name+'</span><b>'+v30Money(value)+'</b></div>').join('')+
  '<div style="display:flex;justify-content:space-between;padding:11px 0"><b>消费合计</b><b>'+v30Money(rec.consumptionExcludingInvestmentPnL)+'</b></div>'+
