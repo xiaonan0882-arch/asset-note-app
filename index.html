@@ -1173,21 +1173,21 @@ function v30Panel(){
  let node=document.getElementById('v30MonthlyPanel');if(!node){node=document.createElement('section');node.id='v30MonthlyPanel';node.className='card';node.style.cssText='margin:16px 0;padding:20px;border-radius:22px';host.insertBefore(node,host.firstChild)}
  if(ym!=='2026-10'||!rec){node.style.display='none';return}node.style.display='';
  const activity=m.investmentActivity||{},housingFund=Number(m.income?.['公积金']||0);
- const rows=[['住房',rec.housing],['日常生活（资产差额估算）',rec.estimatedDailySpending],['架子鼓课程',rec.drumming],['给爸爸',rec.father]];
+ const rows=[['住房',rec.housing],['待核对资金差额（不是日常消费）',rec.unexplainedDifference??rec.estimatedDailySpending],['架子鼓课程',rec.drumming],['给爸爸',rec.father]];
  const holdings=(activity.holdings||[]).map(h=>'<tr><td style="padding:8px 0;border-bottom:1px solid #eee">'+escapeHtml(h.name)+'</td><td style="text-align:right;white-space:nowrap;border-bottom:1px solid #eee">'+v30Money(h.periodPnLProxy)+'</td></tr>').join('');
  const notes='南京旅游3033元列为11月消费，10月期末加回预付款；代哥哥保管2100元列为应付款；未报销3919元列为应收款。公积金提取到账已包含银行余额，绝不重复计入资产；月度归属和实际到账日期分别记录。';
  node.innerHTML='<div style="font-size:12px;color:#667085">10月11日—11月10日 · 收支与投资对账</div><h2 style="font-size:21px;margin:8px 0 16px">钱花在哪里，真正留下多少</h2>'+
  '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">'+
- [['期间实际到账收入',Number(rec.periodCashIncome||((rec.wageIncome||0)+housingFund))],['实际消费估算',rec.consumptionExcludingInvestmentPnL],['期间消费后结余',Number(rec.periodCashIncome||((rec.wageIncome||0)+housingFund))-Number(rec.consumptionExcludingInvestmentPnL||0)],['投资损益估算',rec.estimatedInvestmentPnL]].map(([label,v])=>'<div style="background:#f5f7fa;border-radius:14px;padding:13px"><div style="font-size:12px;color:#667085">'+label+'</div><div style="font-size:21px;font-weight:700;margin-top:6px">'+v30Money(v)+'</div></div>').join('')+'</div>'+
+ [['期间实际到账收入',Number(rec.periodCashIncome||((rec.wageIncome||0)+housingFund))],['已确认专项支出',rec.confirmedSpecialSpending??8850],['按预算估算消费后结余',Number(rec.monthlyAllocatedIncome||((rec.wageIncome||0)+housingFund))-Number(rec.confirmedSpecialSpending||8850)-Number(rec.dailyBudget||5000)],['投资损益估算',rec.estimatedInvestmentPnL]].map(([label,v])=>'<div style="background:#f5f7fa;border-radius:14px;padding:13px"><div style="font-size:12px;color:#667085">'+label+'</div><div style="font-size:21px;font-weight:700;margin-top:6px">'+v30Money(v)+'</div></div>').join('')+'</div>'+
  '<h3 style="font-size:16px;margin:20px 0 8px">消费构成</h3>'+
  rows.map(([name,value])=>'<div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #eee"><span>'+name+'</span><b>'+v30Money(value)+'</b></div>').join('')+
- '<div style="display:flex;justify-content:space-between;padding:11px 0"><b>消费合计</b><b>'+v30Money(rec.consumptionExcludingInvestmentPnL)+'</b></div>'+
+ '<div style="display:flex;justify-content:space-between;padding:11px 0"><b>已确认专项支出</b><b>'+v30Money(rec.confirmedSpecialSpending||8850)+'</b></div>'+
  '<h3 style="font-size:16px;margin:18px 0 8px">投资与定投</h3>'+
  '<div style="display:flex;justify-content:space-between;padding:8px 0"><span>易方达已确认定投</span><b>'+v30Money(activity.confirmedSubscriptions)+'</b></div>'+
  '<div style="font-size:12px;color:#667085;margin-bottom:8px">定投是现金转为基金，不是消费。持有收益与本期损益不同；下表为两期市值扣除已知申赎后的期间估算。</div>'+
  '<table style="width:100%;font-size:12px;border-collapse:collapse">'+holdings+'</table>'+
  '<h3 style="font-size:16px;margin:20px 0 8px">下月执行建议</h3>'+
- '<div style="line-height:1.8;font-size:13px;color:#485467">日常生活按每月5000元设置预算，房租4750元单列。旅游、课程、家庭支持归类为专项支出；每月区分消费后结余与投资损益，不将定投当成支出。<p style="margin-top:8px">'+notes+'</p></div>';
+ '<div style="line-height:1.8;font-size:13px;color:#485467">日常生活按每月5000元设置预算；9842元为待核对资金差额，绝不直接当成日常消费，房租4750元单列。旅游、课程、家庭支持归类为专项支出；每月区分消费后结余与投资损益，不将定投当成支出。<p style="margin-top:8px">'+notes+'</p></div>';
 }
 const v30OriginalRenderAll=renderAll;
 renderAll=function(){v30OriginalRenderAll();v30Panel()};
