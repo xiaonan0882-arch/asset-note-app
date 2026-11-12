@@ -875,7 +875,24 @@ async function loadMarketBrief(force=false){
  try{
   const res=await fetch('./data/daily-brief.json?t='+(force?Date.now():Math.floor(Date.now()/3600000)),{cache:'no-store'});
   if(!res.ok)throw new Error('HTTP '+res.status);
-  marketBrief=await res.json();renderResearch();renderOfficialData();renderHomeResearch();
+  marketBrief=await res.json();
+  // Never display old headlines as today's market research.
+  const now=Date.now(),maxAge=36*60*60*1000;
+  marketBrief.items=(Array.isArray(marketBrief.items)?marketBrief.items:[]).filter(x=>{
+    const ts=Date.parse(x.publishedAt||'');
+    return Number.isFinite(ts)&&ts<=now&&now-ts<=maxAge;
+  });
+  renderResearch();renderOfficialData();renderHomeResearch();
+  const updated=Date.parse(marketBrief.asOf||'');
+  const stale=!Number.isFinite(updated)||now-updated>24*60*60*1000;
+  const status=document.getElementById('researchAsOf');
+  if(status&&(stale||!marketBrief.items.length)){
+    status.textContent=(stale?'新闻数据尚未更新；':'当前没有最近36小时内可核实的新闻；')+
+      '最近抓取：'+(Number.isFinite(updated)?new Date(updated).toLocaleString('zh-CN'):'未知')+
+      '。请稍后刷新。';
+  }
+  if(stale){const homeStatus=document.getElementById('homeResearch');if(homeStatus&&!marketBrief.items.length)homeStatus.innerHTML='<div class="mini">今日研究正在等待最新数据，旧新闻已隐藏。</div>';}
+
  }catch(e){
   if(home)home.innerHTML='<div class="notice warn"><b>今日热点暂时没有刷新成功</b><div class="mini">你的财务数据不受影响。稍后点“每日研究 → 刷新”即可。</div></div>';
   const list=document.getElementById('researchList');if(list)list.innerHTML='<div class="empty">公开市场数据暂时不可用。</div>';
