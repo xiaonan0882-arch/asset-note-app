@@ -1,17 +1,226 @@
 {
-  "asOf": "2026-11-16T06:24:03.100090+00:00",
+  "asOf": "2026-11-16T18:30:18.376470+00:00",
   "title": "每日市场研究",
   "freshnessRule": "仅展示最近36小时的新闻；来源及发布时间以原文为准。",
   "items": [
     {
+      "theme": "全球",
+      "region": "全球",
+      "title": "美联储研究超级智能对就业、生产率和货币政策的影响 - www.tmgm.com",
+      "summary": "",
+      "why": "",
+      "source": "www.tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxObmx6bXBNV094UGFwc2dRUUhlTmZCUF9hMkRLVnpob1lteXE2ZVVQb3VzVHkxMDNDcGhHWlZNQV9VY1BIQ2p3OGY5S0NpRHo5S0F0aHZNem1MRm5SVGN6aUlJc2hlaERWV1V6UHJOTTBsaGl6WVZxNlVqWUlnMlVCTDdJS1ROUkpxNjZMNlppYVZTLTdGRTdJR3MtZ3pvQWxVUldLZ18yRGpQWllqQXU5S0ZvY0pNT2IyWkEzOE1lRkxrcnlSekJHWEZuMVVDMWJYd1o2MGJhWmE0NXVQVm83Sjg2ajI?oc=5",
+      "publishedAt": "2026-11-16T16:49:24+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "AI抛售持续，英伟达财报前夕，费半大跌5%，黄金、原油双双走低 - 华尔街见闻",
+      "summary": "",
+      "why": "",
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9LMzVhZkozVGY2eVVqWU9KUlRKZHZMV1RHVlJnSnIxWHhGeWNBWVVyOXdjRUEtZFM5SWpFVjZxQUIwcE9HQjdXY1NqYURtMHgyUjZr?oc=5",
+      "publishedAt": "2026-11-16T14:41:34+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "财经夜行线1116丨APEC会议进入“深圳时间” 市场聚焦金价回调背后的定价逻辑之变 - 第一财经",
+      "summary": "",
+      "why": "",
+      "source": "第一财经",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5TaXJRMVJ0dUpOaVh5VVQzVGc0N3ltX2J2MGpQMUhsb0VJOFlvSTJOM1JleHFQcmw4Sk9SM2VycnJuX0xHc1JZUEZSaGstTWtybUN5dg?oc=5",
+      "publishedAt": "2026-11-16T14:05:30+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "DeepSeek开始限制长对话?丨财经下午茶 - 中国经济网",
+      "summary": "",
+      "why": "",
+      "source": "中国经济网",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9NU2U1ejNybTJDMTBubTRzOFdBVU00cW1qLUxWZ1dOSVhodTc5UG9OOTNjRTBPbkZPNFNubXoyX1d1THRwQ1VycmhpdDF1QnZ1UFlzQ2NqdGpzM0pOaGJiZG9yMHpxdEl0eE5McnpVaw?oc=5",
+      "publishedAt": "2026-11-16T13:57:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "轩锋—黄金破低反弹晚间先空后多，原油反弹空再度兑现！_名家点金 - 黄金网",
+      "summary": "",
+      "why": "",
+      "source": "黄金网",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9peHlGU0JKUm1sd1JSZG00VkNiUEpKN1dGOGFlNmdWUzFUQUNxOUMwSzZ6RjYxM21NT2FnaWJDMmU0VUdqMG00V21ydklIXzNSVVR5alBrUHU4amtRS284Zktjek54WXdNVGdXTQ?oc=5",
+      "publishedAt": "2026-11-16T13:43:02+00:00",
+      "freshness": "recent"
+    },
+    {
       "theme": "科技",
       "region": "全球",
-      "title": "韩国政府称英伟达对韩国的合作承诺依然有效 - Moomoo",
+      "title": "AI股票抛售是否过度？还是华尔街抢先下调了预期？ - 华尔街见闻",
+      "summary": "",
+      "why": "",
+      "source": "华尔街见闻",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBRbGttUl9WdEFNMVowTmZjdF9PZGpIWE5ERHNMcVQtaW0yX2VxY3lSNjZ1bTFZcHJaWjJueWV2QURWbFJZQ0RtRF83VHlEazVvOGMw?oc=5",
+      "publishedAt": "2026-11-16T13:39:32+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "王奶贵：黄金原油外汇解析_名家点金 - 黄金网",
+      "summary": "",
+      "why": "",
+      "source": "黄金网",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBYcmRGNFdvZ2p0RW81YXd3eWpsZXVjTEpFY29DbWwzUlIyekE1UkdUdUJDMkRUMUdReC1EZk16Mm9GSmVFTUlzSDB3eXRrUjdoTXNORHFTRFlvV0JCZXh0d1RhemdnWW4yUUpqQg?oc=5",
+      "publishedAt": "2026-11-16T13:35:01+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "环球下周看点：黄仁勋GTC演讲 “癌症疫苗”详细数据出炉 Meta、特斯拉发布财报 - 财联社",
+      "summary": "",
+      "why": "",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9zQVN5WGFjTnF5ZVMzbC1BVVR1ODl1c01kYzl5clRJOTA4R0F5cTdtMzROc3R0T1Y0dzl0OTg5MjItc2VHaGdjUQ?oc=5",
+      "publishedAt": "2026-11-16T13:21:24+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "金价新低，“一只金镯子亏2万” - 凤凰网财经",
+      "summary": "",
+      "why": "",
+      "source": "凤凰网财经",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5xanByOUh5SU43R1Vqa1RVQ21wZ3lhcnJWOHhyLWxsOU1Sb1B5QUlQZ0h6aEg2c0c1SlFsUmVwQWxJYWFiLWxsN2pQUHJUTGg1?oc=5",
+      "publishedAt": "2026-11-16T12:34:41+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "市场需警惕印尼央行可能采取预防性政策调整 - Shangbao Indonesia",
+      "summary": "",
+      "why": "",
+      "source": "Shangbao Indonesia",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE91c1k1b2wwN3ZHRUt2Umt2aXp6a2lVci1vbmJOSEs5dnMyUGQ5RGRjQ3dHSDhMdHhuZWxGWFNlNFdIclFVN041ejdEQ1RhSFR4QWdmcFBWN190Y1VteUx0YUFod1c0N3N2NFNSYXA2blY2YjlUQmh0MjNR?oc=5",
+      "publishedAt": "2026-11-16T12:04:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "韩央行大幅加仓黄金ETF，伊朗地缘扰动持续：金油汇市场看点 - Fx678",
+      "summary": "",
+      "why": "",
+      "source": "Fx678",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9EekFmZEQyX1ZhdnVxTF82NGc4ZnVOUl9zRG9Ib0wwZmx0UTFid21iWjI4NFpyS2lzQm53VF9xY1JVSDB0N2w0VmViYkhYancwbkQyNDlaTHZnbTg?oc=5",
+      "publishedAt": "2026-11-16T11:59:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "科技",
+      "region": "全球",
+      "title": "白线日报｜亚洲半导体股大跌，南亚科加码先进 DRAM 制造 - 吴说",
+      "summary": "",
+      "why": "",
+      "source": "吴说",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPOEU2Q0ZrZF9STk1WV195TlVCclp5NmZjUU55Wm5fbXFSMzJ4NnpvWDRVUzJZWUI2aTAyNEJxaDU3RjBMU1FEcklZVS12ZjhyUlBvV0Q1YlZhbHNJdE5Sc1ZVX1c3VTFwWU1CUVdTeC1KZVpZWHI0dUFKN0VUVldJV0h5MFBlOVRnZUN1YmdoYm8tdUl2U011aHV1ZmRyazc4c3NRakt2Y0RRVFlU?oc=5",
+      "publishedAt": "2026-11-16T11:49:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "中国消费",
+      "region": "中国",
+      "title": "中国饮品出海：从“赶时髦”到真金白银“下注”东南亚 - 中华网财经",
+      "summary": "",
+      "why": "",
+      "source": "中华网财经",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE4xck9OZHNoT3ZKbTVHOXVjT1UyRVQ3UThnOG9OWHZIaWFrdk45eTlVNkxVYkNkQVM0dFBmUFFtVGdxY01FZkI0MGxMd3VodG82QmQ3NVhoS0Jsa1haQzB5R3RhVEZka1dNUDh6VVA0TUF0RHM?oc=5",
+      "publishedAt": "2026-11-16T08:32:19+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "科技",
+      "region": "全球",
+      "title": "英伟达高层动荡冲击AI股 台股暴跌6% 韩股挫3.6% - KLSE Screener",
+      "summary": "",
+      "why": "",
+      "source": "KLSE Screener",
+      "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQaHEwVFJBTV9INkNjVHRTLTZGWkljdXVsVlladnoxbDdQX2JQTmQ4TllveFhFMXoySTgzNThrdHJqcEJNeGtxLXMzb0VSWm55ZUtQQmR2OVZZMEszb2pHVnRsckpidUVpbl9pX2o5UzVnVl9uV2JIZGxoLXZNajkzWUlKdk5pRkozTnBQOVZ2b2I1blNDSmtyem5rOWNrZ1VxbW9tSTdMSGg1THJVZFJ5VmZVOVhRdUREbjZVdldCcEFoSGZISnZGREZVOHBpb3dKYXpYLU90dEM0a0dMZW9yZWE5T0l6UEltYXBDbWU1WTFLcXJDenZ6QnpBVm9DeGJ1RGkwQTk2V1hTRmw4TTkzYjN2U0pvcWwtQnI5UGFwejlGZWp5ajhxUlgyZWhFWVA1ekNvNVNn?oc=5",
+      "publishedAt": "2026-11-16T07:51:36+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "科技",
+      "region": "全球",
+      "title": "英伟达高层动荡冲击AI股 台股暴跌6% 韩股挫3.6% - e南洋",
+      "summary": "",
+      "why": "",
+      "source": "e南洋",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1fQ2ZqSXdrd1h6ejZyMkhxTDBGLWk2eVZ2a3NOTkVuM1hqeDh1RzUzSDRJZGVVNGhWdzUySnpHZnhucHpSUWRTMU51TzlUbXgxNDd3clR6NjZZaUNNbjNuOV9jdw?oc=5",
+      "publishedAt": "2026-11-16T07:51:36+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "科技",
+      "region": "全球",
+      "title": "$台积电 (TSM.US)$ 如果你在财报发布前关注英伟达、AI 和半导体趋势，那 @Keith Farnsworth ... - Moomoo",
       "summary": "",
       "why": "",
       "source": "Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPYXk0dnpwSnZtaFdJd2Q0b3lGbUswcnU4S0xFN243c2l6QnBmTXoweV9hQ1llTHlkZWVxYkVXdzdSLVEwR0l0SVZsM2RpYXRPeE9KbUlPc0JvaUUzNDJzWnBuRGhvby1zSEM4ajdCTXZoXzlzZENEM0VlNDBLb2FEUmdnZV96cmJ1TTJlVlQ2Y25EMjhBNU9hN0pYYS1sZXNCSFNpeXhJM29SMDRwdWRLWHJWdjhMVFNWcndWdg?oc=5",
-      "publishedAt": "2026-11-16T04:41:48+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNGdSRWt0LXZ3UERtQmE2SThZM0EyTXRHZjZsNFFPMUV0OWRISG5rTWJjM05GRXF4Z3NJYng5YnhvWExFQ2oxaVZrOFNFUTBKWFNzcXR4UmdEQjZ1WE80b2NuUW85cTZKd2piRm1kU3JKWHl0ZnF0Z2VoOVI0ZlBqamptVUtMNnpsZDJSR3JCc1NlMDBFdHBCc0dSdW9oQ1pKNzBra1FlQ1VrdUVFRzhoU3pWNVprRGs?oc=5",
+      "publishedAt": "2026-11-16T07:43:33+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "央行“锁长放短”稳定资金预期 - 21财经",
+      "summary": "",
+      "why": "",
+      "source": "21财经",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxON1lOTjktblp3aG9lc0NTek9faFdLSDRZaGo3R19uQ1pGRGVub0Mtd1p6VjIzeFJYcS1MeFYyQTNXZ0YwS2hSQ1dVS0VUeUM2RmRIYXg4R3BlcEt4UVJYb2VJcmNaNDQ3WGQyYk43endFay1vZjVHeUtrZm96ZXBLbm1lVkgyelhNWHZhTTZWdw?oc=5",
+      "publishedAt": "2026-11-16T07:07:49+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "期货收评：国内商品大面积飘绿！黄金、白银大跌，原油反弹 - 同花顺",
+      "summary": "",
+      "why": "",
+      "source": "同花顺",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1qY2R3NHR2bjdKSkJtTjFMTTFXNVdhS0haZ1dQOThIbjk0cVNpQU50UHhQYVRYcU9aVGJ3c21rMDBRR2Z3N0VWNE5fdkUySDYyaTlic3RYYVBlcklNYUE?oc=5",
+      "publishedAt": "2026-11-16T07:04:44+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "【早报】“美国茅台”，创历史新高；黄金、白银、原油齐涨；“易中天”发布重要公告；多只科技龙头股，计划回购股份 - 财联社",
+      "summary": "",
+      "why": "",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9LRjJFUUpMUkhHSnlLbHdSdnpTcmUzd0dicEtMdDk0ZWNMc1FJb1ViRk42dV83Tk5GRS13MXdZMGtSNm5Sa0JCMw?oc=5",
+      "publishedAt": "2026-11-16T05:34:39+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "商品日报（11月16日）：能源化工品领涨 贵金属持续承压白银跌超6% - 东方财富",
+      "summary": "",
+      "why": "",
+      "source": "东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE40cF8xbW9pcXhQU2JmOXg2cDlWaG82RlR2SEI4SlN5NXBFanNjM0RiMFFsbFlOMy0zSUF3RUF2cTRKbGdPb2NxNjZKVmozWkJ6WjZSRU9wNDZwVHFaWFAwM1lFc05sQQ?oc=5",
+      "publishedAt": "2026-11-16T05:09:50+00:00",
       "freshness": "recent"
     },
     {
@@ -26,17 +235,6 @@
       "freshness": "recent"
     },
     {
-      "theme": "宏观",
-      "region": "中国",
-      "title": "央行“锁长放短”稳定资金预期 - 凤凰网财经",
-      "summary": "",
-      "why": "",
-      "source": "凤凰网财经",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1FVjVNRFFsNUFuNUZPSHhLVVRVQjY3dkFPTDhZZklmNjVvcHJrMm5yTGdqdS1yVFFOT3hKYnF3dDc5eElnWFBrbXRKS0ZVNGtD?oc=5",
-      "publishedAt": "2026-11-16T03:29:49+00:00",
-      "freshness": "recent"
-    },
-    {
       "theme": "大宗商品",
       "region": "全球",
       "title": "【早报】美股存储、光通信板块，全线走低；原油上涨、黄金收跌；一批A股公司业绩预喜 - 财联社",
@@ -48,14 +246,14 @@
       "freshness": "recent"
     },
     {
-      "theme": "大宗商品",
-      "region": "全球",
-      "title": "潮起黄海 洞见新局｜SFFE2030可持续金融论坛青岛站圆满举行 - FX168",
+      "theme": "宏观",
+      "region": "中国",
+      "title": "中国商品需求激增，但国内经济动能放缓 - 华尔街日报中文网",
       "summary": "",
       "why": "",
-      "source": "FX168",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMjJwR3NJX2xaWG05OU9sTldZRGFlUjZ5Vks4bDE4YzgzRHNmdFptYnpJVVBjUXl1a0VJSU1vZDN2el85a1NzLTFUVzZ5ak1NbGRFaHFEM0NYbTh2VkFyYmhVUE1qdlhCR2d5V3J2TkxtMzdhb0lseUo3c3M1cG1CY3NuNWQ1c3ZUNnVv?oc=5",
-      "publishedAt": "2026-11-16T02:47:37+00:00",
+      "source": "华尔街日报中文网",
+      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxOWnQ2WnQ5RUNDYS1HLXBWM2NmNXZNc3RlTWwxRlRiSHVqOTlueFNIcUVTWE5BUlBIQXhOU3d0bE05UjhzNWtKbEhKYzZwUWJZRTZQaXloRWtqUGFTd05LOEt2SXREWTVaZDlMUFJxbEFqaEhTdk1TRm9CWFpmRV9sYTFYaWtRZm5WdEwzYlBIRjhabUduaVBxUWlweHNKd25lVlkzSnAxX2wyNFZpN3dqTG01eVdqZkE4WGwzQzJyamhVZXVLdldNelFpZEVLOEdRbUZwZXNfQTdxc055QWpoUTY4QVZkS1VzMWpRc2JVLUxFVjZYcTg5UzBQejRDREpac0oxbWVpWnktclJmQzdrUGJTMlR1UG9SazBPLW5VWFU1WEVfRkFqUW1OUkNWUEY0Y1NVSGN6cWdZanZMRnYzbjdB?oc=5",
+      "publishedAt": "2026-11-16T02:55:00+00:00",
       "freshness": "recent"
     },
     {
@@ -92,58 +290,14 @@
       "freshness": "recent"
     },
     {
-      "theme": "大宗商品",
+      "theme": "全球",
       "region": "全球",
-      "title": "轩锋—黄金低位继续埋伏多，原油反弹还是空！_名家点金 - 黄金网",
-      "summary": "",
-      "why": "",
-      "source": "黄金网",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE92eXh5RUVqT25QcHI1dF9YVl9INm41UGRYQzN4UUdhcEpxeWstMnJxcW0wS2ZuQ19fNDVCZDlGLVJOTWVlT0xDMURXNXZfb0VHbVd2RHJnamhXdDhqRnV6RnBob0RzRkhqYkd5cg?oc=5",
-      "publishedAt": "2026-11-16T02:05:01+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "科技",
-      "region": "全球",
-      "title": "行业风向 | 英伟达换帅震撼马股！10大AI概念股遭重新估值，谁最受伤？谁能撑过风暴？ - 十方财经",
-      "summary": "",
-      "why": "",
-      "source": "十方财经",
-      "url": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxQbDRtQWxJY2hqX3BkeFJ0NmlGb1hLbHh3d1c1NENJM01HYnZLNmxYZy0xbG9PRUhpYjVocllyQmN3RnhtX0VNekU4T0NELXlZekc4WGVBTkR2a0VRVHlnb1ZJZnRUWDA5T3hLYkpJUDh5WXJ2VEVwVmhOWnNvYkRvczlwZXdsYlNGV3RMWm8teFRYQXRDNFB1VTNkRmtTNHk3T3RkMTFtVS0zMklaU1lxcno2bHB6VktaQnFnT0J0aUlhNlVZelZKTGxlWXBOZU5WS2dWMERRdUtxQldpVGxFZHBoQzliUXZQN01tcHo3SUVHNlhpaGZ1WkZuSEpfOTB1bzZCUGNsdldrRzFxZ2kwdFJaZ1R0N1d3X1I2dzlkaXZaS3ltZWl6S0Vsd0lza3BQMUdHUjdFbWxtTjllbHZMa2NhMTlQWTNpMTNhTlM0T3dJTVk?oc=5",
-      "publishedAt": "2026-11-16T02:04:51+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "宏观",
-      "region": "中国",
       "title": "全球市场本周迎来超级风暴！美联储酝酿更激进加息，英伟达财报与中美元首会晤重磅来袭 - 金融界",
       "summary": "",
       "why": "",
       "source": "金融界",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1FcF9UcUpoOFROSnp4Ylg5Z280LW41RDRqTnVWTXR5Yndoc3JPLU9JM0xMS0NRWkdLQTdNRTljT0t3OFFpWmMyempwQWRKQy1fMjlJR01RQ25xYU1NejdZTDBRc1E4aFFVN2pjUWZSSGg5ODlj?oc=5",
       "publishedAt": "2026-11-16T02:01:05+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "大宗商品",
-      "region": "全球",
-      "title": "原油交易提醒：地缘局势支撑风险溢价，美原油延续超跌反弹_国际原油市场 - 黄金网",
-      "summary": "",
-      "why": "",
-      "source": "黄金网",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBQckJvN2tEb3FVblV4NUJmdnY1cXNtMUhsRDVxYS1OOTRBWERDVTAzQWZZNjNqMTFMRkJuNGR2WG9Nb1phQWJOLVpkSkFGMGtSYTlXeU9TNHZEVk9xQjJwcXl4eDhxbHVoOVRGcw?oc=5",
-      "publishedAt": "2026-11-16T01:51:16+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "大宗商品",
-      "region": "全球",
-      "title": "如果船东开始绕开霍尔木兹，油价会怎么走？_国际原油市场 - 黄金网",
-      "summary": "",
-      "why": "",
-      "source": "黄金网",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxdGtGWGxEWXdLeTNrMGkxaG1fSmFiT0d1UGNlbG13UlFyc1Q0Ym1KN1o0eWtybDg1aFRDSWVWWF9PQ1F2aVp5ZzdEMGR2VFdsdUZ2dmFxXzJ6OUZ5WjRkbmNxUmNPbjhoNEI0eQ?oc=5",
-      "publishedAt": "2026-11-16T01:38:01+00:00",
       "freshness": "recent"
     },
     {
@@ -160,34 +314,12 @@
     {
       "theme": "科技",
       "region": "全球",
-      "title": "HyperXpress 的推理效率比 NVIDIA GPU 高出 3.5 倍……在 SC26 大会上发布 AI 半导体服务器 - 벤처스퀘어",
-      "summary": "",
-      "why": "",
-      "source": "벤처스퀘어",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAwTHN3N1d5VlV1VFJJYmx3RVM5TzR3bWpDbWFEU082Y1gxbE1QUWJjR2F1bVBfUnJLcWRldFZUa2E5RTFzTWdsM0JKd0J6bUJsUnM4?oc=5",
-      "publishedAt": "2026-11-16T01:07:06+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "科技",
-      "region": "全球",
       "title": "美股讯号 | 英伟达将于11月17日公布第三季度业绩，关注AI芯片需求变化 ｜#美股资讯# #英伟达# #财报发布# - Sohu",
       "summary": "",
       "why": "",
       "source": "Sohu",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPS2p5SUpIb0pNR2Y4YWNKQTZ2WDNjTlgxRDlvWjY3b1otUi1FLXBidXRaR3Z3a3lteVRFeXJ2aDg0OHZTNXVTVE5heHMwRXBhbWtJSUhvRFpMRW9ENWEybkx6M0xyZEU2cWZ3bjQ2MV9NcHY1YWNHYk5KVHdZVkF4cldMUnBQdVVVUmFGMA?oc=5",
       "publishedAt": "2026-11-16T01:02:04+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "科技",
-      "region": "全球",
-      "title": "黄仁勋的“一人经营”33年后落幕…英伟达进入临时经营体制 - 朝鮮日報中文版",
-      "summary": "",
-      "why": "",
-      "source": "朝鮮日報中文版",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPQ0pQeEdXUzNLZnhiTnpPQ0J6bmptVmxVc216ZE9lZXk3QlVCX2dIVWhiVWFkemVMNFhjZm14UnF0OVNObDUtM0lCS25BSnhHeEt5UGczNUFfc1dVUzhaVU5jOUJtNUNEa2UxVGo4Rmc2ZmZoWTNGZVhKTzJoM21GLTc4Nm4tQUNhVGozYUc0bDRyQQ?oc=5",
-      "publishedAt": "2026-11-16T00:35:46+00:00",
       "freshness": "recent"
     },
     {
@@ -202,25 +334,14 @@
       "freshness": "recent"
     },
     {
-      "theme": "宏观",
-      "region": "中国",
-      "title": "中国10月经济数据、11月LPR将出炉；英伟达、腾讯等将发布财报丨一周前瞻 - 21财经",
-      "summary": "",
-      "why": "",
-      "source": "21财经",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQcndGS0I0Y1NxN3JTSEh4WmRpSU5SMHNlYlA4Ump1aHN0RzZNQ2h2Um1UWm1UeGl6OTIzRlRQd0dNNUwzbFBHektJMTBWckVrS2pvUmxuNGZaeVpkUklpa2Z2Q2FJR0VoNDhEbDlLYWdBbjZBWTJwdjFkQ2RZUVZlOVZiWElhcTZ5Z1dYSjIxbw?oc=5",
-      "publishedAt": "2026-11-16T00:23:00+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "科技",
+      "theme": "全球",
       "region": "全球",
-      "title": "黄仁勋风波冲击市场：AI 硬件泡沫结束了吗？Crypto 后市如何？ - 吴说",
+      "title": "油价下跌也没用？美国通胀可能比美联储预想的更顽固 - 上海有色金属网",
       "summary": "",
       "why": "",
-      "source": "吴说",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOenluNVZSb2ZGWWVac0FsVURadnp2TTcwLXlMR25OQTR1RXc1Sm5uUEVkUGxpX2k3MlE1NWdqQlprRXp2c3lQZVRDd1RIVlZUSEpNbExOTHlTeEhNNlEyNmxCV1NGWGJkUl9JZVFHQ3kwUk9jM0EyYmlXMk5fU3NINFRFQVlDTV90OXhITnZB?oc=5",
-      "publishedAt": "2026-11-15T23:50:00+00:00",
+      "source": "上海有色金属网",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5zR0llY0gzUlB6emVBTUtibEY3cHNCZ24zWU5LbW5qSDlackVNQXlZa3FuRmhDRUs2dXNsQXRQcE1ZVndNUnZMUkpEVzI2Q3Z4blRDNjBDLWI2MjJ5dy1ManR1eVVRbWJOSkJJelEwVmdIQQ?oc=5",
+      "publishedAt": "2026-11-16T00:22:51+00:00",
       "freshness": "recent"
     },
     {
@@ -235,146 +356,25 @@
       "freshness": "recent"
     },
     {
-      "theme": "宏观",
-      "region": "中国",
-      "title": "美联储立场鹰派，澳元跌破0.6800，市场聚焦中国数据 - www.tmgm.com",
-      "summary": "",
-      "why": "",
-      "source": "www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOMVNzRlB0TXJRWkxiNzRCTDlEdjUzR3VhcUVGNWpEWi1ZYUJsTkR1azlPcnNyd0l6bFdIeVRXNFNTbkk1VGo0WXoyVnNIem0wM1phbU0wTjNXQl9xRnlCZWVGUWcxeklPLWo0RkRINkxDeHRvdC1aWEVjYTlBTDJ6aGhEcnQ5cHpSTjVaN2Y5TWhaZ0tfYWhuSnpHclBaYmVPcy1WX2lWcFNJTWRqbm5mNEJRQTZTLXBfVmE5RUI4c2ViU3h0a1hSOGw0RVJ5QjV2Z3dDb0xCQ0F0U3JtZWRz?oc=5",
-      "publishedAt": "2026-11-15T23:35:33+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "全球",
-      "region": "全球",
-      "title": "美国财政部长与美联储就利率问题看法不一 - IDNFinancials",
-      "summary": "",
-      "why": "",
-      "source": "IDNFinancials",
-      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxNRlROb0U0S2FxSzZkVG1RYlNDa0Q0cllxR25YS1JlRC1yTVBEZW40bmZ1TFExR19yUGRMXzg1Z0sxLW5KOGgxQWhkMmZHQTAydUY2OGlWdzUtRWJpRDlUakNITjRGWUdlaU9ULVo5NzljR0pwV095aWppYkp1eVpCZ293bVRBS2VkdmVyV2FZaHNOSFZWTXVtQ3JBVkp6SjZzQVNSVENEOHB6Y29CbkhUaUpEUUhfdXlTQ3lLbWUxaGhHVGNia3J4d2xqeVdkcExNU0NjQS1rZl8wNksxYUdGSmNzMXBHT19WMko2UjRKaTBheHRMc3kyMmQ1UjVGWkJma1RoMGNoeHpXWWtHRHZIY0ZyN0hHV0pXMC12aElzcGpicWlHWk5BbHFVdkx3cHBiOENIRG5POHl0cnc?oc=5",
-      "publishedAt": "2026-11-15T23:30:00+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "宏观",
-      "region": "中国",
-      "title": "东方财富财经早餐 11月16日周一 - 东方财富",
-      "summary": "",
-      "why": "",
-      "source": "东方财富",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4yMDllZ3lYODhxUEtmUmExbkw4S1RjSTVvMEppa1NpV3RpYVFsTUdLcV9kSkNzWUthQnBIVFl3WUtYQ2hMdkNSNmtiOGRjbnphQWozaW1uNUI4dHIzWFpkendRNzRCZw?oc=5",
-      "publishedAt": "2026-11-15T22:17:43+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "大宗商品",
-      "region": "全球",
-      "title": "【早报】美股存储、半导体板块，全线重挫；原油飙升、黄金收涨；多家A股公司三季报预增 - 财联社",
-      "summary": "",
-      "why": "",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1JT2RsRktmMlVEbnhET0xpak1yRWYxYThUUUFFMGVaT18tTmV3NHVmeExhVmVEVG16RTROelR0QVZsYTRJdFVfbA?oc=5",
-      "publishedAt": "2026-11-15T19:44:04+00:00",
-      "freshness": "recent"
-    },
-    {
       "theme": "科技",
       "region": "全球",
-      "title": "NVIDIA没有黄仁勳后 韩国半导体、电池业者全面清点影响 - DIGITIMES",
+      "title": "美国商务部收紧AI芯片海外访问限制，AMD续跌4%，市忧半导体股海外订单交付能见度下滑 - TradingKey",
       "summary": "",
       "why": "",
-      "source": "DIGITIMES",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQkw5SkFnR2J2MzhPcVZ3N2ZuMEU4c2ZHMnpYcDhSV2Y2S0hDU1pya3hpcUpLNmNUV3hUYXkwLXdBd3I1Q0hYLXkwUjRSeE5ReUtYSl9EM24zV0NaR3pYb05SMVZZaERiSVR6Mnh5M3FZTkwxNi0xOTRSMTBFVk8zWmxYcXpSbGh1bHFiZW1pajVNbmVjU3NrZFcta3V2X1R5Z1VvSFRySnc5SVpPOHdacXJiMjVLVnI5bEg0ZWl2U2RkLTB2QVE?oc=5",
-      "publishedAt": "2026-11-15T18:44:00+00:00",
+      "source": "TradingKey",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQQ003MFFNajItNlFOa3p5MEhOamx4dVpZU2RsRUh5SkxaSnNldC1kTWJUSWN1Vm91WDFIYjRsVmFNQUNwQnZFYTFkdkJxNmt1azhXd1QxT0xqWi1lSVhaTE5XT09wcDAwX2lfeTdVSVBHUFZETmtNb2xCMU5rd1FJWHNQamd0cXNOTnh3d3B5SEhnV3NsaENIT2pnMGEwclBPMWFLeUhQeFdHR3BzRF9KTUo5TkdBb3hjSEFXNlJ4cXBVbkNHQkJzejB3al84M0MwaW5scnpzQlFhREpaREtrS0lqMms0Znc?oc=5",
+      "publishedAt": "2026-11-15T23:19:00+00:00",
       "freshness": "recent"
     },
     {
       "theme": "宏观",
       "region": "中国",
-      "title": "中国经济数据疲软，澳元持续承压 - www.tmgm.com",
+      "title": "从4%提高至6%！央行重大调整，就在今日 - 新浪新闻_手机新浪网",
       "summary": "",
       "why": "",
-      "source": "www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPN2NSeWlHOExRbHhUNi0xOTVFYkwzQnRRdmJFTl9TZ0s0bjhCNEs5QkFsaldZbF93MjllaVBoZEMxNzIxT0tscVRJblRNMWdTMG5wb3hMTnhreVlDbllJUlBSOGZhUVZKRFNsWGFhWlJDU1VpQ2R4Ujk3Rm4yRFJyV21TVllVT0tDbGZLUF9TVmJCWXhlN2UwYk9aM3pTcF92RDFsclFlaEh0UWh4NWZCQmVkRUFmNU9GT2hrMDVYVmR4S0l2M1BnRXVaT0t6ZjdHZFVIS2Y3QVN3Zw?oc=5",
-      "publishedAt": "2026-11-15T18:00:00+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "大宗商品",
-      "region": "全球",
-      "title": "陈昌先：11.15 黄金原油周评 + 行情分析 - 虎扑体育网",
-      "summary": "",
-      "why": "",
-      "source": "虎扑体育网",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9iRmI3NzRGbGFQWi03b0pacUZGRW0tT08zM011Vm9GcmZKN1dsRGFZX1hBdUowWEp5cGJDdjZYT1FmX3ZLSkFvZjE1VWVmUQ?oc=5",
-      "publishedAt": "2026-11-15T16:55:04+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "中国消费",
-      "region": "中国",
-      "title": "风味糖浆市场2035年预测：咖啡文化与无糖需求驱动增长 - 新闻和统计 - IndexBox",
-      "summary": "",
-      "why": "",
-      "source": "IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNOXE3eXMtRE9xMzVhTk5sTGk1YkllR1JuaXUtbWlDQ2Y2bXhwSWlFWTJaYUJUNkRLelRfYS0yempINDdRWDdhVHhETnRLUmNYbFA1TkJXTUtlZ0ZZY3BnV2p4d2NIV04tcUtpV2dtUTRJNUxldVpldmRTMHRhR0xrRGtvZ2xiUDlqUUFTRkNYWm5JOGdpLVRadHUzekVMUUdYR0N0SGlfRWx2ZXZrY2ptUTNtelpTdDZ5R2JzbmpTMWRjeEd5ejhvdQ?oc=5",
-      "publishedAt": "2026-11-15T16:01:05+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "中国消费",
-      "region": "中国",
-      "title": "奥乐齐首席运营官访华称“前方机会巨大”，蝴蝶饼安缇安将开出大陆首店，卡夫亨氏新帅把重点转向收购和剥离，星巴克亚太门店突破6000家 - 小食代",
-      "summary": "",
-      "why": "",
-      "source": "小食代",
-      "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxQOWQydmlkcWZCQ3VBakJzbnd5TWYtVHktMTUxRDNJNG9JXzd4TXl1ZmN4QzBHcEV1WEw0UzdrMmRtS0E3TEtyYVd0bXFIMnM1cXgybUNOZ1JPcU1BbGdoQlFwcVJFVGMwWk94emppMVpUODRCNE1IcExicHltNmx3c2tBQzFYNEZIRDBPTUVNd1FCdDZSN0ZJY2NjNHJXTTBPNEtScDlURmc0aVRQV0dfRWFsVnBjUWhla3FEbTN3clhhbElBV3djRW5UMVdTdTI2NGtMaTBWcE82X0lIWVBaTjZnOW4wM3NwOVBQZ01ZLXl5bDladS1ONThMRjVWRlNURFFrYUtMU1Nqei02ZWxySkJoYXVfdkw3dlB0VHprVUdQQ0YtaERVMi00d2hNUTI0NWJsWW5aRkVheVp6VGFnTA?oc=5",
-      "publishedAt": "2026-11-15T14:01:00+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "宏观",
-      "region": "中国",
-      "title": "央行持续购金，金价破位下行！会跌到3500美元吗？ - 新浪财经",
-      "summary": "",
-      "why": "",
-      "source": "新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5XZnIySUE5dl91NXpWald3WTUwVDF2aVA1SVhwakV0Q05ER1RzcG9va0U0OWdwVHlndlZyaXoyd2ZZajZjOGNhVkJ1RVVGeUpJVzJHLUJpQkRVbTJsZmQyNzRGSnE3RXNxMGhkMWFXelg4bDhCZ3R0bg?oc=5",
-      "publishedAt": "2026-11-15T13:24:47+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "宏观",
-      "region": "中国",
-      "title": "央行发布10月金融统计数据 专家：贷款“降速提质”仍是新常态 - Sohu",
-      "summary": "",
-      "why": "",
-      "source": "Sohu",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOd2hDd3JJZ0hvelNrNEdEMnFFRW1Ga011NFNsUXBtSExYeHR5TXprTjNWNXdpaHZZQ2dKZGZxTDJmb0pfLV9hUWJrTmxaS3BlRUw1aEtXRmw4dGctWi14UWlEcHRlQUw1TE1Ddk1feF84R3l1cTdkZGNqYk9mN0pkSUJVVk1rR0dK?oc=5",
-      "publishedAt": "2026-11-15T12:14:34+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "大宗商品",
-      "region": "全球",
-      "title": "【早报】“美国茅台”，创历史新高；黄金、白银、原油齐涨；“易中天”发布重要公告；多只科技龙头股，计划回购股份 - 财联社",
-      "summary": "",
-      "why": "",
-      "source": "财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9LRjJFUUpMUkhHSnlLbHdSdnpTcmUzd0dicEtMdDk0ZWNMc1FJb1ViRk42dV83Tk5GRS13MXdZMGtSNm5Sa0JCMw?oc=5",
-      "publishedAt": "2026-11-15T11:13:08+00:00",
-      "freshness": "recent"
-    },
-    {
-      "theme": "全球",
-      "region": "全球",
-      "title": "最黑暗处最光明 - 华尔街见闻",
-      "summary": "",
-      "why": "",
-      "source": "华尔街见闻",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5IZnExdUE2MzRzQWFDTVVCRXNpb0NzNFRYUFF6VGdwbWwwLVdsay1jbW8yTEdpdUlKWTZ0NnA2aVFGQko0MlUxc0NPRENPU2lNSlkw?oc=5",
-      "publishedAt": "2026-11-15T11:11:06+00:00",
+      "source": "新浪新闻_手机新浪网",
+      "url": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxOMXd0Uk42ZTFvdHA3OFN1RHZLdzJ3RjF6QURmUzBrUVd2NVhXSnNmUWJjVjUyTm1xTXdSMXRtRlQ3RkFTcGlYZGtxdTFPbFNzY09ZODBvWEhmVzRLSkgwaWgyZXd4NEttMU9LWW91ZkxBcC1nT0w0aTY5cDFXenRuMFhDa1J5cklNVU5ydXFlWVZXNDRxRFBFUjIyeDZLVE1WNUFzc3BmdDRCR1Fod2NwR1VDSUQ3a1QtdmdiRjZ4ajY0V0dOZzBvbGJad24tSnkzMnphOUhsekFVUGpWQU5yVkY5YVY4MW1MeXgwanlVVTdnY0JDVWYzOS04c1JTa1hna3VJb000cWxBWDY2cGZpWWVDV2tvSjkxNWdkWnJLMjJjUXVxVlNzc3lHa3Fhd3dtZ2FHbDBZWGp6X2xsRXNMekJlZ05NcGFjT09FT1g5UzYtNzRMTTdXZ2M5N1dRenBWVWx2ZVdYRmNIblNZa2hWVzkxX3Zzdk9YbkE?oc=5",
+      "publishedAt": "2026-11-15T21:29:06+00:00",
       "freshness": "recent"
     }
   ],
