@@ -1,8 +1,372 @@
 {
-  "asOf": "2026-11-25T08:29:06.333913+00:00",
+  "asOf": "2026-11-26T08:12:41.691456+00:00",
   "title": "每日市场研究",
   "freshnessRule": "仅展示最近36小时的新闻；来源及发布时间以原文为准。",
-  "items": [],
+  "items": [
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "韩国央行加息25个基点，全球货币政策分化提速 - 京报网",
+      "summary": "",
+      "why": "",
+      "source": "京报网",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE54YmhPVW5kRVhXQjlKVjdjVzlzSEZJa2x5eHZNNFh0VHpoa2tFSlM3YWJEUnAycU1SU0RlTm9RNzgxbU80bHl4ejBlcEozSmNxOGxuN0RFZzVOblFmR2c?oc=5",
+      "publishedAt": "2026-11-26T06:30:18+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "科技",
+      "region": "全球",
+      "title": "中国降低对英伟达依赖，预计2028年AI半导体国产化率达88% - 亚洲日报",
+      "summary": "",
+      "why": "",
+      "source": "亚洲日报",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9UZklpOVBvYklRZ0lNZHBpYTN6c29zUFBzeGxWQUI4bS1yUVhibVhydXdLeHgwcGJZT1hUZzlfdzJjR0dZR1JBTkpEakhLSWhjT2NGcFVQNzNXYlE?oc=5",
+      "publishedAt": "2026-11-26T06:28:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "EIA：截至11月20日当周美国原油库存418,906千桶，较上周增加1109千桶 - 黄金网",
+      "summary": "",
+      "why": "",
+      "source": "黄金网",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBWRjR2UlBURmxmX3J4SE9ZOVllVWh4cHZ0Z2xocElkTVJLSlZVeXJIZ0xLOGc4N092d0d5VHJIaHdMU1lTeG92MEZyTVFFTFAwc1VHU1dUcERUc1JCc0Z6OWFSUFg1WWpzNWlvRg?oc=5",
+      "publishedAt": "2026-11-26T06:24:09+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "全球",
+      "region": "全球",
+      "title": "金银拉升，美联储褐皮书：美国经济温和增长但通胀顽固 - Sohu",
+      "summary": "",
+      "why": "",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWHEzalZJX0lDNjMwd1p0M0Nhdk5MMVk5cER1d3dmLVM4UTJxX1VWdW5FODJnaTFNMTZWNHZwUS1Zd0k0TndyZjBaT2FUXzBVNnBxUHdaRlhkX1Uyd2N2anNiMFFtUWc4SktHd3FBM1IzOW1pTGxQaWh0RzlhajlldEk4TzJWLVd4c2lCQg?oc=5",
+      "publishedAt": "2026-11-26T05:51:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "科技",
+      "region": "全球",
+      "title": "英伟达反转，AI大变局来了！ - 中华网财经",
+      "summary": "",
+      "why": "",
+      "source": "中华网财经",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5nSTdlTjRqb2pZbDRkbFUza3V6UFZDRm1DMmZUb0lDUkJoNXZXUGpjaFZzQzEydk5tVXVRZWtfUnBNLTJHaFA4TEVuOEFwQ3Y2dmJGdFpmOTJHMnVBQlpvNTBTOTNzY0xzN0g3YUNR?oc=5",
+      "publishedAt": "2026-11-26T05:30:37+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "钱塘征信摘得央行金发奖三等奖：AI多智能体重构征信建模，让风控能力\"开箱即用\"_公司新闻_财经 - 证券之星",
+      "summary": "",
+      "why": "",
+      "source": "证券之星",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE43YXJSdGNYamh6Qy0wV3hNVXpxbkZycWQxVVQzTlpmalJESWhrZTE3SUdGaEt1WTJaUUNYdWY1T2Q4eWx4M0VwUV9SMmRyMFAzZXJwdVRPR29jcm9uRVYyTQ?oc=5",
+      "publishedAt": "2026-11-26T03:44:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "韩国央行：加息25个基点 - 凤凰网财经",
+      "summary": "",
+      "why": "",
+      "source": "凤凰网财经",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5aY0tYSHN4U29WeXVhLVlYMDZjb1dJRU9ybUVmOHpRakZMMUUzbVg3TXpmejJpN1pLaEk2bUZrdDNlbEFsSmZ2YjhORHNIT2VS?oc=5",
+      "publishedAt": "2026-11-26T03:38:05+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "一张图：2026/11/26黄金原油外汇股指“枢纽点+多空持仓信号”一览 - Moomoo",
+      "summary": "",
+      "why": "",
+      "source": "Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRl9zR0tVTVR6VmJNNktMaHVRYUszb0xnVnRPWnJ2VG9PdVBMa04tUzk3NU84R3lRNkVGNFk3UlM2dG52QkNhYUxMd0J2Vjh1RURQRDBPWHVlSzVhZVdkZlFVMWVaM2VEV19hcXNtdzkzZU5tYVhwTXp2MW1WOFBVM3UtbktuRng4V1R2bnkxNVdzVzlORndBUlpfMW91STdSRlM3bzJua1pCM0gyZ1pjdUMxSUliZw?oc=5",
+      "publishedAt": "2026-11-26T03:31:44+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "一张图：2026/11/26黄金原油外汇股指“枢纽点+多空持仓信号”一览 - 汇通财经",
+      "summary": "",
+      "why": "",
+      "source": "汇通财经",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1kUkExNTNUWEVhWV80RmpXbFNqTlEtV3hEdXM1bFA1Y3Z5QkZTcXhFcnZiemJNT004bTNCZlA5MlJEMHNaQjJvb2F3SHZSOE1HQjlJbnRwM1FfX0E?oc=5",
+      "publishedAt": "2026-11-26T03:31:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "[正点财经]韩国央行宣布加息25个基点 - 央视网",
+      "summary": "",
+      "why": "",
+      "source": "央视网",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1IRUMxNkE3b2NHVDZpYUU5X1NGVC0zQUZnNUNsMlJsMTd6Y2IxYnk0cWpvNjk4Vy1wenAtNXN2SW81RmVaX3BmbFByUjhQQ0wtQ2NQQ1c4M3o0QWJ6LXZPVktPQkFjcjdvZkFYc0dQZVBST005bGc?oc=5",
+      "publishedAt": "2026-11-26T03:22:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "金价巨震后如何走？黄金、白银和原油最新交易分析 盯住这些关键价位 - Sohu",
+      "summary": "",
+      "why": "",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa3VySW11OVlldWFmak9haF9VQm15MEVVUkhPalB1aHA2cEtWZC1JQThKVmdsa2RKV2xQU0NTYXpGMnJxWmtIbENsR0lSS1JkV0N6eFE2N3VLQTIxX01zS3BvRlQ1bVNnRXF3UUhSVjEtVTJaQjQwQ0Q2eE5MS3NzQXk5aWRWM2VD?oc=5",
+      "publishedAt": "2026-11-26T03:12:55+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "100%！美联储，加息大消息！“华尔街之狼”发出警告 - 新浪财经_金融信息服务商",
+      "summary": "",
+      "why": "",
+      "source": "新浪财经_金融信息服务商",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBWaTRGMTgwQXBFcUZzODN2MlJ3Vk5HSWtTN0x6U0ZrSVlJdmJOWjVuVkY4NERlMUVvV19VNnQ1R2JORU9aV0RGRUVDcHpLeV9CeldIa0VlSDBVUXMtWjBieThDRWxxMFlOTGJKbFJ2NE9KYks1X2Y2SA?oc=5",
+      "publishedAt": "2026-11-26T03:00:45+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "全球",
+      "region": "全球",
+      "title": "【环球财经】美联储“褐皮书”：高物价促使美国消费者精打细算 - 新浪财经",
+      "summary": "",
+      "why": "",
+      "source": "新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE50YVRKblJFam4tazk4LTh0WFg4Vi1UYjNweTdwWkhaeElOTlJwZ21udzYzR2dhWVJlMmNmRy1wYnZqYlhZQzdXeTJXUmJ1aEZSY1ZwTmxSaTVCMnNZd0d1TU04eldMTklfMlh2VnRpVm5MTUd5OFBDcQ?oc=5",
+      "publishedAt": "2026-11-26T02:59:34+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "港股异动| 金价、油价均回暖，黄金股、石油股回升！紫金黄金国际大涨5%，中海油、中石油涨超4%， 港美股资讯 - 华盛通",
+      "summary": "",
+      "why": "",
+      "source": "华盛通",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9LSTVVTXhCMEw0N21lSnJfNmZ3WUs5V2UtcmJWTjJDTlVSeGtLdmZ1MXlweFlhakFnSFUxaVNKYjhZbExoaGIyd1QzM1ZKZUpnQ1hlYnV2X2VweXJXSGQ2blZn?oc=5",
+      "publishedAt": "2026-11-26T01:42:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "科技",
+      "region": "全球",
+      "title": "美股AI芯片板块走势分化，英伟达跌3.91%丨美股复盘 - 经济观察网",
+      "summary": "",
+      "why": "",
+      "source": "经济观察网",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1ILWF6NkhYcmNNRVBzNC1HSHJaUnhzazRhSWVxU21LMHNCNEtna3hoMlhyUzlNSVdBSTh5RGZrTmJkN0xZay1scHpDdTduOWdkaXZOUC1GM0M?oc=5",
+      "publishedAt": "2026-11-26T01:12:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "科技",
+      "region": "全球",
+      "title": "国安压倒商业 亚洲半导体牛市剧本恐改写 - 亚洲电视新闻",
+      "summary": "",
+      "why": "",
+      "source": "亚洲电视新闻",
+      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxQN1h4N0FEUlhPckFrX1N3aXBDN3lkdkMzUzlraWE2Xzg3enozVDE2SGk1Wk16bk00RDIzc3lYV1FleGVIeHFJX0FuWnlFY0VTTnJ3QUV5dTZPRU5SWWZ4M19XMkM0YVlkZDJQWng5NHRIYlMzcjVnbFJpWHI5Q2xCVjgtOTRxdEJRN0VUQndjR2o0RjNLZDg4MnFiZ3VjR1pFTG1hTUVodXVMLU83QmFYcGZuVG4wSW9nNE91eHVOYnNaSEFPSTFBXy0zMUhtT1VsTERyZm1CQzVIVlI3anY4SFI5dWV5Ri1pVlFfQjIzN3d2eVVUXy1jZlJGVTUwdV9XdnlaZnZCa0RHbldpZEJ2Q2tjUWpGOFY5MVo4d19MN3lBQQ?oc=5",
+      "publishedAt": "2026-11-26T01:00:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "全球",
+      "region": "全球",
+      "title": "美联储褐皮书释放复杂信号：通胀难降、消费分化，AI投资仍火热 - 财联社",
+      "summary": "",
+      "why": "",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE01UmFCXzRyRWJnbWRvb0tXOEFQT2t2cXJBYTlTR2RGeWJCYXJsUEVYTExmOWJVRDJKeXpzS3lvckloT1BILWlPNQ?oc=5",
+      "publishedAt": "2026-11-26T00:53:08+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "全球",
+      "region": "全球",
+      "title": "美银2027年展望：AI投资成美国经济最大变数，美联储料再加息三次-36氪 - www.36kr.com",
+      "summary": "",
+      "why": "",
+      "source": "www.36kr.com",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1ZVk5pX3R2dUV4T0JTR3lHZUE1ZUcxajIzVmFpNDdCZGMxQkdqRGFicEdzLUdxdTlTcFZCY05oalVQMjJZN3RodkxjVTJza2c?oc=5",
+      "publishedAt": "2026-11-26T00:46:15+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "全球",
+      "region": "全球",
+      "title": "美国拟加征关税影响几何？经济学家：美联储高利率恐维持更长时间！ - 财联社",
+      "summary": "",
+      "why": "",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBmZkZQSm01Yy1HaElZanZmbm9rUG4xdmNWTktqbGYxT19nb2FLWGR3UzQzOHpWenYteFh4T0hsMC12MlhCbnI1Tw?oc=5",
+      "publishedAt": "2026-11-26T00:30:15+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "原油价格预测：供应增长，上涨行情承压 - 黄金网",
+      "summary": "",
+      "why": "",
+      "source": "黄金网",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB3NlhqS1pzNDh3TmwyQXlXeGhhZ3RVa25MaDNSQWk4VFVHZGpQWkdwZ1NnM1JnVm1NTjJnamFBV09yNzlEak5jdXZ1dFFiNzl0Q2FzV2lNcG9pY3B6aHNQSmRWSVJVbzNYVXhRaw?oc=5",
+      "publishedAt": "2026-11-26T00:24:02+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "美股、黄金，上演V字大反弹！原油大涨！中概股爆发，英伟达市值一夜蒸发近1万亿元 - 每日经济新闻",
+      "summary": "",
+      "why": "",
+      "source": "每日经济新闻",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBJMXU2c3l2a0tJM3pTV3FVVEt6NkJzX2VuZmMzeU1wdGk0S0RlNlJsUkFnbFd0SVhWX3NTbWVtc3R4ZWY4ZDFSSG9EelFkOWJpTERZREI4YkhuVDdNdjJ1ck82N0xSZ21U?oc=5",
+      "publishedAt": "2026-11-25T23:55:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "全球",
+      "region": "全球",
+      "title": "全线暴跌，美联储加息突传重磅，美国重大发布 - 凤凰网",
+      "summary": "",
+      "why": "",
+      "source": "凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA5NktjaVVzcW5DdmVnLXVHak9uUW1YR1IxNDhtd1NGdF92LW95YVpaU2RhWm5SaG9iNW8zYWpJaXFJanlvRXJJQU9UcFdxc2Iz?oc=5",
+      "publishedAt": "2026-11-25T23:17:31+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "央广财经早报 | 美联储发布最新经济状况《褐皮书》；新一轮油价调整窗口开启 - Sohu",
+      "summary": "",
+      "why": "",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPeHhpU1B2SHFxalBBMklUc2tQYmlJWFk3RW1ZY3VIdXZXR2dneUpIUjZHdmExbW9BSDltZGdzQzdTVjl0Z0N3Wm93c1ZXR1AtOTROQkxGVExiM0IwLVVHQS1IbS1tVFNtMkJzOF9ZQURWLUtRZnB0VFpSLTBBYzVhVTVlUmNFZDI5?oc=5",
+      "publishedAt": "2026-11-25T23:01:15+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "全球",
+      "region": "全球",
+      "title": "通胀压力持续蔓延！美联储褐皮书显示企业成本普遍上涨12月加息预期进一步强化_滚动新闻 - 证券之星",
+      "summary": "",
+      "why": "",
+      "source": "证券之星",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1DUkg4a2NNelBGSDFkeHZHN1plalNESmxnNGprRzFMLTkza0ZJczN3YjV1Rmx6ME5YNFV6dmd4Wks3cERYanNXX3NJejN1N3ZROE81VVBOTER0Tm5jRUtpbXQtYnQ?oc=5",
+      "publishedAt": "2026-11-25T22:00:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "科技",
+      "region": "全球",
+      "title": "美出口管制下英伟达芯片在中国黑市价格翻倍 - 朝鮮日報中文版",
+      "summary": "",
+      "why": "",
+      "source": "朝鮮日報中文版",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9QdWtud3BHeVNJWDkzbVZyOTdhUlFDZm1ZbzRCbUFfOUxFM0xiOVdoWVNLNGs2a2NNSTN2YlFXSlo1My1NMHo1R1RjcU9zSWxrUkhRNnJsaWlsMHE3T1g5cWRLcDRFcTU0bW40ZFJvM0RLRi1CWWc?oc=5",
+      "publishedAt": "2026-11-25T20:59:08+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "科技",
+      "region": "全球",
+      "title": "黄仁勋重返英伟达扰动全球AI行情 国产算力芯片加速突围 - 新浪财经_金融信息服务商",
+      "summary": "",
+      "why": "",
+      "source": "新浪财经_金融信息服务商",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0yd2p3blRPNldOYk1TaUFaeVA2aGFsMWJ6SDczVmR5WkxCR2NIaTZxZnkxT09uY3FmeldQRmZiMDl2Z2c3a0ZEcE9ERkEtckMwYmNCQTEwNUFraV9waDJyYUg1Q3VYWEhBRFJQUTk3M0pYZHZHaVNiUQ?oc=5",
+      "publishedAt": "2026-11-25T20:52:56+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "精准调控流动性，避免资金面过度波动，央行公开市场操作打出“组合拳” - 北京商报",
+      "summary": "",
+      "why": "",
+      "source": "北京商报",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9HME5MLVMxd00taTN5QUVnV3pLUUJuaVNEWGdFSGZncDVqYjlETTQ2VnBaVnEyTmJlWDR3R1VWODlFUmJqMTFzSC03ZnVrZ3BXbVVaejJ6ekxtX2xWNFE?oc=5",
+      "publishedAt": "2026-11-25T19:58:15+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "全球",
+      "region": "全球",
+      "title": "美国PCE加速升温、GDP增长大超预期！美联储12月加息已成定局-市场参考 - 金十数据",
+      "summary": "",
+      "why": "",
+      "source": "金十数据",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5kaXMwTWg4YlVfN1Q1OXNTX092VTVFTEFHUk5aOGZpZ3QweVZDbjl2YVExS29zWVg3YnVhZC03bDdYZy1qaGVRTkFiWmVHMms?oc=5",
+      "publishedAt": "2026-11-25T19:02:56+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "大宗商品",
+      "region": "全球",
+      "title": "【早报】美联储10月加息概率，大幅回落；原油、黄金双双上涨；美光科技，Q4营收利润双超预期 - 财联社",
+      "summary": "",
+      "why": "",
+      "source": "财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE50UXFMemlOeldjQ2xIejNOUXN2MnlhUl9oaklqc0huZ2hUY0h2S0VPb1RpUEsyRldiVzVJQmRhU184eElKRWRkZA?oc=5",
+      "publishedAt": "2026-11-25T18:10:47+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "宏观",
+      "region": "中国",
+      "title": "【环球财经】土耳其国际储备大幅下降 央行启动30亿美元外汇掉期交易 - 经济观察网",
+      "summary": "",
+      "why": "",
+      "source": "经济观察网",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1xOUk3a1U0eWNsY2w3N1AwSzdma05VYkVJZXZjY0pqTXdxdWxnbjlSTUU5bWRUSlZYaEhkcFA2TkZQeHZybWh2a2FOYWhXa3hubUpHS2FIUjg?oc=5",
+      "publishedAt": "2026-11-25T14:55:00+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "科技",
+      "region": "全球",
+      "title": "交期最长20周，高端PCB正在卡住AI扩产-36氪 - 36kr",
+      "summary": "",
+      "why": "",
+      "source": "36kr",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1HRjJfa2RuNkU3UE0wc1ZpcGh5NXFiWkRZT2xoYXZWcTQ3RDZielR5UWQ1c1hjMTVUVmxqanhvZTVmRHF4RElTYXRSVk1VQUhs?oc=5",
+      "publishedAt": "2026-11-25T12:28:58+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "科技",
+      "region": "全球",
+      "title": "AI数据中心推动存储繁荣，2027年NAND供过于求风险或于2028年传导至DRAM - 虎嗅",
+      "summary": "",
+      "why": "",
+      "source": "虎嗅",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1pSE8wcHNsNDBOeWVSZEh1QTQ1N1VYa0VnWWRiaG9rQnlHZHBMTTJWSDBEckJpalNJMllwTG16WHdZRWdLNjZyelNtWlEtLWphTGtLbA?oc=5",
+      "publishedAt": "2026-11-25T12:08:02+00:00",
+      "freshness": "recent"
+    },
+    {
+      "theme": "中国消费",
+      "region": "中国",
+      "title": "情绪消费风口，解压饮料成为功能饮料的下一个增长点 - Sohu",
+      "summary": "",
+      "why": "",
+      "source": "Sohu",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWEFlVDJfQ2I5WlF4OHVxbWlsNGVJWFhETmJCVndoUGJuZ1BKRmdsQWdib2psTHVMV3hiRUZObmJ3WTN1dVlhdjFVdG5ZRl9sbnEwdEVzLTNBeHM2WEV1Q0NTVGc0UzIxQTNScmROVFJFVk0tdTEwS05HSmRXeTVuNXBBdVN6dU5O?oc=5",
+      "publishedAt": "2026-11-25T12:00:00+00:00",
+      "freshness": "recent"
+    }
+  ],
   "latestData": [
     {
       "theme": "消费",
@@ -32,5 +396,5 @@
       "publishedAt": "2026-09-21"
     }
   ],
-  "status": "no_recent_items"
+  "status": "ok"
 }
